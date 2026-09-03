@@ -10,6 +10,11 @@
           content="1 Art 4 Hands — Deux jeunes passionnés de dessin réalisant des créations personnalisées sur commande.">
 
     <style>
+
+        /* =========================
+           BASE
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -27,21 +32,29 @@
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+
             padding: 20px 7%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             background: rgba(250, 249, 247, 0.88);
             backdrop-filter: blur(12px);
+
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .logo {
@@ -56,6 +69,7 @@
 
         nav ul {
             display: flex;
+            align-items: center;
             gap: 30px;
             list-style: none;
         }
@@ -64,21 +78,57 @@
             color: #171717;
             text-decoration: none;
             font-size: 15px;
-            transition: 0.2s;
+            transition: 0.25s ease;
         }
 
         nav a:hover {
             opacity: 0.55;
         }
 
-        /* HERO */
+
+        /* =========================
+           INSTAGRAM
+        ========================= */
+
+        .instagram-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 23px;
+            height: 23px;
+        }
+
+        .instagram-link svg {
+            width: 21px;
+            height: 21px;
+
+            fill: none;
+            stroke: #171717;
+            stroke-width: 1.7;
+
+            transition: 0.25s ease;
+        }
+
+        .instagram-link:hover svg {
+            transform: scale(1.12);
+            opacity: 0.55;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 100vh;
+
             padding: 160px 7% 100px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 60px;
         }
 
@@ -98,7 +148,9 @@
         h1 {
             font-size: clamp(55px, 8vw, 110px);
             line-height: 0.95;
+
             letter-spacing: -6px;
+
             margin-bottom: 30px;
         }
 
@@ -108,10 +160,17 @@
 
         .hero p {
             max-width: 520px;
+
             font-size: 19px;
             color: #555;
+
             margin-bottom: 35px;
         }
+
+
+        /* =========================
+           BOUTONS
+        ========================= */
 
         .buttons {
             display: flex;
@@ -121,11 +180,15 @@
 
         .button {
             display: inline-block;
+
             padding: 14px 24px;
+
             border-radius: 100px;
+
             text-decoration: none;
             font-weight: bold;
-            transition: 0.25s;
+
+            transition: 0.25s ease;
         }
 
         .button-primary {
@@ -146,33 +209,47 @@
             background: #eee;
         }
 
-        /* DESSIN DECORATIF */
+
+        /* =========================
+           DESSIN DECORATIF
+        ========================= */
 
         .drawing {
             width: 360px;
             height: 460px;
+
             border: 1px solid #ddd;
             background: white;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             transform: rotate(3deg);
-            box-shadow: 20px 25px 60px rgba(0,0,0,0.08);
+
+            box-shadow: 20px 25px 60px rgba(0, 0, 0, 0.08);
         }
 
         .drawing-inner {
             width: 75%;
             height: 80%;
+
             border: 2px solid #222;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             font-size: 90px;
             font-weight: 900;
+
             letter-spacing: -10px;
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           SECTIONS
+        ========================= */
 
         section {
             padding: 110px 7%;
@@ -180,7 +257,9 @@
 
         .section-title {
             font-size: clamp(40px, 6vw, 70px);
+
             letter-spacing: -3px;
+
             margin-bottom: 50px;
         }
 
@@ -188,12 +267,18 @@
             font-weight: 300;
         }
 
-        /* PRESENTATION */
+
+        /* =========================
+           PRESENTATION
+        ========================= */
 
         .about {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
@@ -208,63 +293,88 @@
 
         .numbers {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 15px;
         }
 
         .number {
             padding: 35px;
+
             background: white;
+
             border: 1px solid #e4e4e4;
         }
 
         .number strong {
             display: block;
+
             font-size: 40px;
+
             margin-bottom: 5px;
         }
 
-        /* GALERIE */
+
+        /* =========================
+           GALERIE
+        ========================= */
 
         .gallery {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .art {
             aspect-ratio: 1 / 1;
+
             background: #e8e5df;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             overflow: hidden;
         }
 
         .art img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
-            transition: 0.4s;
+
+            transition: 0.4s ease;
         }
 
         .art:hover img {
             transform: scale(1.05);
         }
 
-        /* COMMANDE */
+
+        /* =========================
+           COMMANDE
+        ========================= */
 
         .order {
             background: #171717;
+
             color: white;
+
             border-radius: 30px;
+
             padding: 70px;
         }
 
         .order p {
             max-width: 600px;
+
             color: #bbb;
+
             font-size: 18px;
+
             margin-bottom: 30px;
         }
 
@@ -273,22 +383,30 @@
             color: #171717;
         }
 
-        /* EQUIPE */
+
+        /* =========================
+           EQUIPE
+        ========================= */
 
         .team {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 20px;
         }
 
         .person {
             background: white;
+
             padding: 40px;
+
             border: 1px solid #e4e4e4;
         }
 
         .person h3 {
             font-size: 28px;
+
             margin-bottom: 10px;
         }
 
@@ -296,18 +414,28 @@
             color: #666;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             padding: 50px 7%;
+
             border-top: 1px solid #ddd;
+
             display: flex;
             justify-content: space-between;
+
             gap: 20px;
+
             color: #777;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -316,22 +444,35 @@
             }
 
             nav ul {
-                gap: 12px;
+                gap: 14px;
             }
 
             nav a {
                 font-size: 12px;
             }
 
+            .instagram-link {
+                width: 21px;
+                height: 21px;
+            }
+
+            .instagram-link svg {
+                width: 19px;
+                height: 19px;
+            }
+
             .hero {
                 padding: 130px 5% 70px;
+
                 flex-direction: column;
+
                 align-items: flex-start;
             }
 
             .drawing {
                 width: 280px;
                 height: 350px;
+
                 align-self: center;
             }
 
@@ -356,30 +497,103 @@
                 flex-direction: column;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
+
         <div class="logo">
             1 Art <span>4</span> Hands
         </div>
 
+
         <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#projet">Le projet</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#commande">Commander</a></li>
+
+            <li>
+                <a href="#accueil">
+                    Accueil
+                </a>
+            </li>
+
+            <li>
+                <a href="#projet">
+                    Présentation
+                </a>
+            </li>
+
+            <li>
+                <a href="#commande">
+                    Commande
+                </a>
+            </li>
+
+
+            <!-- INSTAGRAM -->
+
+            <li>
+
+                <a
+                    href="https://www.instagram.com/1art_4hands/?hl=fr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="instagram-link"
+                    aria-label="Instagram de 1 Art 4 Hands"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                        ></rect>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        ></circle>
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                            fill="#171717"
+                            stroke="none"
+                        ></circle>
+
+                    </svg>
+
+                </a>
+
+            </li>
+
         </ul>
+
     </nav>
 
 
-    <!-- ACCUEIL -->
+
+    <!-- =========================
+         ACCUEIL
+    ========================= -->
 
     <main id="accueil">
+
 
         <section class="hero">
 
@@ -389,10 +603,12 @@
                     Dessins personnalisés
                 </div>
 
+
                 <h1>
                     1 Art<br>
                     <span>4 Hands.</span>
                 </h1>
+
 
                 <p>
                     Deux passionnés de dessin, une même envie :
@@ -400,15 +616,21 @@
                     en créations uniques.
                 </p>
 
+
                 <div class="buttons">
 
-                    <a href="#commande"
-                       class="button button-primary">
+                    <a
+                        href="#commande"
+                        class="button button-primary"
+                    >
                         Commander un dessin
                     </a>
 
-                    <a href="#galerie"
-                       class="button button-secondary">
+
+                    <a
+                        href="#galerie"
+                        class="button button-secondary"
+                    >
                         Voir nos créations
                     </a>
 
@@ -418,15 +640,20 @@
 
 
             <div class="drawing">
+
                 <div class="drawing-inner">
                     1<br>4
                 </div>
+
             </div>
 
         </section>
 
 
-        <!-- PROJET -->
+
+        <!-- =========================
+             PRESENTATION
+        ========================= -->
 
         <section id="projet">
 
@@ -434,11 +661,14 @@
                 Notre projet
             </div>
 
+
             <h2 class="section-title">
                 L'art <span>à quatre mains.</span>
             </h2>
 
+
             <div class="about">
+
 
                 <div class="about-text">
 
@@ -447,11 +677,13 @@
                         jeunes passionnés de dessin.
                     </p>
 
+
                     <p>
                         Nous réalisons des dessins personnalisés
                         sur commande, en donnant à chaque création
                         une attention particulière.
                     </p>
+
 
                     <p>
                         Notre objectif : créer des œuvres qui ont
@@ -459,6 +691,7 @@
                     </p>
 
                 </div>
+
 
 
                 <div class="numbers">
@@ -490,7 +723,10 @@
         </section>
 
 
-        <!-- GALERIE -->
+
+        <!-- =========================
+             GALERIE
+        ========================= -->
 
         <section id="galerie">
 
@@ -498,63 +734,88 @@
                 Nos créations
             </div>
 
+
             <h2 class="section-title">
                 La galerie <span>1 Art 4 Hands.</span>
             </h2>
 
+
             <div class="gallery">
 
-                <!-- Remplace les liens par vos propres images -->
 
                 <div class="art">
-                    <img src="images/dessin1.jpg"
-                         alt="Dessin réalisé par 1 Art 4 Hands">
+                    <img
+                        src="images/dessin1.jpg"
+                        alt="Dessin réalisé par 1 Art 4 Hands"
+                    >
                 </div>
 
-                <div class="art">
-                    <img src="images/dessin2.jpg"
-                         alt="Dessin réalisé par 1 Art 4 Hands">
-                </div>
 
                 <div class="art">
-                    <img src="images/dessin3.jpg"
-                         alt="Dessin réalisé par 1 Art 4 Hands">
+                    <img
+                        src="images/dessin2.jpg"
+                        alt="Dessin réalisé par 1 Art 4 Hands"
+                    >
                 </div>
 
-                <div class="art">
-                    <img src="images/dessin4.jpg"
-                         alt="Dessin réalisé par 1 Art 4 Hands">
-                </div>
 
                 <div class="art">
-                    <img src="images/dessin5.jpg"
-                         alt="Dessin réalisé par 1 Art 4 Hands">
+                    <img
+                        src="images/dessin3.jpg"
+                        alt="Dessin réalisé par 1 Art 4 Hands"
+                    >
                 </div>
 
+
                 <div class="art">
-                    <img src="images/dessin6.jpg"
-                         alt="Dessin réalisé par 1 Art 4 Hands">
+                    <img
+                        src="images/dessin4.jpg"
+                        alt="Dessin réalisé par 1 Art 4 Hands"
+                    >
                 </div>
+
+
+                <div class="art">
+                    <img
+                        src="images/dessin5.jpg"
+                        alt="Dessin réalisé par 1 Art 4 Hands"
+                    >
+                </div>
+
+
+                <div class="art">
+                    <img
+                        src="images/dessin6.jpg"
+                        alt="Dessin réalisé par 1 Art 4 Hands"
+                    >
+                </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- COMMANDE -->
+
+        <!-- =========================
+             COMMANDE
+        ========================= -->
 
         <section id="commande">
 
             <div class="order">
 
+
                 <div class="small-title">
                     Une idée en tête ?
                 </div>
+
 
                 <h2 class="section-title">
                     Faisons-la<br>
                     <span>dessiner.</span>
                 </h2>
+
 
                 <p>
                     Vous avez une idée de dessin personnalisé ?
@@ -562,18 +823,24 @@
                     Nous vous répondrons pour discuter de votre demande.
                 </p>
 
-                <!-- Remplace l'adresse par votre vraie adresse -->
-                <a class="button"
-                   href="mailto:contact@1art4hands.fr">
-                    Nous contacter par mail
+
+                <a
+                    class="button"
+                    href="mailto:contact@1art4hands.fr"
+                >
+                    Nous contacter
                 </a>
+
 
             </div>
 
         </section>
 
 
-        <!-- EQUIPE -->
+
+        <!-- =========================
+             EQUIPE
+        ========================= -->
 
         <section>
 
@@ -581,16 +848,21 @@
                 Qui sommes-nous ?
             </div>
 
+
             <h2 class="section-title">
                 Deux personnes,<br>
                 <span>un projet.</span>
             </h2>
 
+
             <div class="team">
 
+
                 <div class="person">
 
-                    <h3>Prénom</h3>
+                    <h3>
+                        Prénom
+                    </h3>
 
                     <p>
                         Passionné de dessin et de création,
@@ -603,7 +875,9 @@
 
                 <div class="person">
 
-                    <h3>Prénom</h3>
+                    <h3>
+                        Prénom
+                    </h3>
 
                     <p>
                         Passionné de dessin et de création,
@@ -612,15 +886,20 @@
                     </p>
 
                 </div>
+
 
             </div>
 
         </section>
 
+
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -633,33 +912,7 @@
         </div>
 
     </footer>
-```html
-<nav>
-    <div class="logo">
-        1 Art <span>4</span> Hands
-    </div>
 
-    <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#projet">Présentation</a></li>
-        <li><a href="#commande">Commande</a></li>
-
-        <li>
-            <a href="https://www.instagram.com/1art_4hands/?hl=fr"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="instagram-link"
-               aria-label="Instagram de 1 Art 4 Hands">
-                <svg viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <circle cx="17.5" cy="6.5" r="1"></circle>
-                </svg>
-            </a>
-        </li>
-    </ul>
-</nav>
-```
 
 </body>
 </html>
