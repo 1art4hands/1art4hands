@@ -20,8 +20,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #F5F0E8;
-    color: #3B3028;
+    background: #E8E1D4;
+    color: #26352B;
     line-height: 1.6;
 }
 
@@ -36,10 +36,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(245,240,232,0.90);
+    background: rgba(232, 225, 212, 0.92);
     backdrop-filter: blur(14px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(59,48,40,0.10);
+    border-bottom: 1px solid rgba(38, 53, 43, 0.12);
 }
 
 .logo {
@@ -49,7 +49,7 @@ nav {
 }
 
 .logo span {
-    color: #C87555;
+    color: #B85C43;
     font-weight: 400;
 }
 
@@ -61,14 +61,14 @@ nav ul {
 }
 
 nav a {
-    color: #3B3028;
+    color: #26352B;
     text-decoration: none;
     font-size: 15px;
-    transition: .25s;
+    transition: 0.25s ease;
 }
 
 nav a:hover {
-    color: #C87555;
+    color: #B85C43;
 }
 
 /* INSTAGRAM */
@@ -83,13 +83,13 @@ nav a:hover {
     width: 21px;
     height: 21px;
     fill: none;
-    stroke: #3B3028;
+    stroke: #26352B;
     stroke-width: 1.7;
-    transition: .25s;
+    transition: 0.25s ease;
 }
 
 .instagram-link:hover svg {
-    stroke: #C87555;
+    stroke: #B85C43;
     transform: scale(1.12);
 }
 
@@ -114,25 +114,25 @@ nav a:hover {
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #8FA58A;
+    color: #58705A;
 }
 
 h1 {
-    font-size: clamp(55px,8vw,110px);
-    line-height: .95;
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.95;
     letter-spacing: -6px;
     margin-bottom: 30px;
 }
 
 h1 span {
     font-weight: 300;
-    color: #C87555;
+    color: #B85C43;
 }
 
 .hero p {
     max-width: 520px;
     font-size: 19px;
-    color: #6D625A;
+    color: #596158;
     margin-bottom: 35px;
 }
 
@@ -148,26 +148,26 @@ h1 span {
     border-radius: 100px;
     text-decoration: none;
     font-weight: bold;
-    transition: .25s;
+    transition: 0.25s ease;
 }
 
 .button-primary {
-    background: #3B3028;
+    background: #26352B;
     color: white;
 }
 
 .button-primary:hover {
-    background: #C87555;
+    background: #B85C43;
     transform: translateY(-3px);
 }
 
 .button-secondary {
-    border: 1px solid #C8BBAA;
-    color: #3B3028;
+    border: 1px solid #AEB5A7;
+    color: #26352B;
 }
 
 .button-secondary:hover {
-    background: #E4D5C0;
+    background: #D8D0C0;
 }
 
 /* DESSIN */
@@ -175,26 +175,26 @@ h1 span {
 .drawing {
     width: 360px;
     height: 460px;
-    border: 1px solid #D8CCBC;
-    background: #FFFDF9;
+    border: 1px solid #C9C0AF;
+    background: #F5F0E7;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotate(3deg);
-    box-shadow: 20px 25px 60px rgba(59,48,40,.10);
+    box-shadow: 20px 25px 60px rgba(38,53,43,0.12);
 }
 
 .drawing-inner {
     width: 75%;
     height: 80%;
-    border: 2px solid #8FA58A;
+    border: 2px solid #58705A;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 90px;
     font-weight: 900;
     letter-spacing: -10px;
-    color: #C87555;
+    color: #B85C43;
 }
 
 /* SECTIONS */
@@ -204,17 +204,17 @@ section {
 }
 
 .section-title {
-    font-size: clamp(40px,6vw,70px);
+    font-size: clamp(40px, 6vw, 70px);
     letter-spacing: -3px;
     margin-bottom: 50px;
 }
 
 .section-title span {
     font-weight: 300;
-    color: #C87555;
+    color: #B85C43;
 }
 
-/* ABOUT */
+/* PRESENTATION */
 
 .about {
     display: grid;
@@ -225,7 +225,7 @@ section {
 
 .about-text {
     font-size: 20px;
-    color: #6D625A;
+    color: #596158;
 }
 
 .about-text p {
@@ -240,28 +240,28 @@ section {
 
 .number {
     padding: 35px;
-    background: #E6DCCB;
-    border: 1px solid #D5C7B4;
+    background: #D5CDBD;
+    border: 1px solid #C2B8A6;
 }
 
 .number strong {
     display: block;
     font-size: 40px;
     margin-bottom: 5px;
-    color: #8FA58A;
+    color: #58705A;
 }
 
 /* GALERIE */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .art {
-    aspect-ratio: 1/1;
-    background: #E4D5C0;
+    aspect-ratio: 1 / 1;
+    background: #CFC4B0;
     overflow: hidden;
 }
 
@@ -269,7 +269,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .4s;
+    transition: 0.4s ease;
 }
 
 .art:hover img {
@@ -279,30 +279,30 @@ section {
 /* COMMANDE */
 
 .order {
-    background: #8FA58A;
-    color: #FFFDF9;
+    background: #26352B;
+    color: #F5F0E7;
     border-radius: 30px;
     padding: 70px;
 }
 
 .order .small-title {
-    color: #E6DCCB;
+    color: #B8C5B4;
 }
 
 .order .section-title span {
-    color: #FFFDF9;
+    color: #D58A6C;
 }
 
 .order p {
     max-width: 600px;
-    color: #F0F2EA;
+    color: #D5DBD2;
     font-size: 18px;
     margin-bottom: 30px;
 }
 
 .order .button {
-    background: #FFFDF9;
-    color: #3B3028;
+    background: #F5F0E7;
+    color: #26352B;
 }
 
 /* EQUIPE */
@@ -314,80 +314,80 @@ section {
 }
 
 .person {
-    background: #FFFDF9;
+    background: #F5F0E7;
     padding: 40px;
-    border: 1px solid #D8CCBC;
+    border: 1px solid #C9C0AF;
 }
 
 .person h3 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #C87555;
+    color: #B85C43;
 }
 
 .person p {
-    color: #6D625A;
+    color: #596158;
 }
 
 /* FOOTER */
 
 footer {
     padding: 50px 7%;
-    border-top: 1px solid #D8CCBC;
+    border-top: 1px solid #C9C0AF;
     display: flex;
     justify-content: space-between;
-    color: #75695F;
+    gap: 20px;
+    color: #687068;
 }
 
 /* MOBILE */
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
 
-nav {
-    padding: 18px 5%;
-}
+    nav {
+        padding: 18px 5%;
+    }
 
-nav ul {
-    gap: 14px;
-}
+    nav ul {
+        gap: 14px;
+    }
 
-nav a {
-    font-size: 12px;
-}
+    nav a {
+        font-size: 12px;
+    }
 
-.hero {
-    padding: 130px 5% 70px;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    .hero {
+        padding: 130px 5% 70px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.drawing {
-    width: 280px;
-    height: 350px;
-    align-self: center;
-}
+    .drawing {
+        width: 280px;
+        height: 350px;
+        align-self: center;
+    }
 
-section {
-    padding: 80px 5%;
-}
+    section {
+        padding: 80px 5%;
+    }
 
-.about,
-.team {
-    grid-template-columns: 1fr;
-}
+    .about,
+    .team {
+        grid-template-columns: 1fr;
+    }
 
-.gallery {
-    grid-template-columns: 1fr 1fr;
-}
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
 
-.order {
-    padding: 40px 25px;
-}
+    .order {
+        padding: 40px 25px;
+    }
 
-footer {
-    flex-direction: column;
-}
-
+    footer {
+        flex-direction: column;
+    }
 }
 
 </style>
@@ -403,23 +403,51 @@ footer {
 
 <ul>
 
-<li><a href="#accueil">Accueil</a></li>
-
-<li><a href="#projet">Présentation</a></li>
-
-<li><a href="#commande">Commande</a></li>
+<li>
+<a href="#accueil">Accueil</a>
+</li>
 
 <li>
-<a href="https://www.instagram.com/1art_4hands/?hl=fr"
+<a href="#projet">Présentation</a>
+</li>
+
+<li>
+<a href="#commande">Commande</a>
+</li>
+
+<li>
+<a
+href="https://www.instagram.com/1art_4hands/?hl=fr"
 target="_blank"
 rel="noopener noreferrer"
-class="instagram-link">
+class="instagram-link"
+aria-label="Instagram de 1 Art 4 Hands"
+>
 
 <svg viewBox="0 0 24 24">
-<rect x="3" y="3" width="18" height="18" rx="5"></rect>
-<circle cx="12" cy="12" r="4"></circle>
-<circle cx="17.5" cy="6.5" r="1"
-fill="#3B3028" stroke="none"></circle>
+
+<rect
+x="3"
+y="3"
+width="18"
+height="18"
+rx="5">
+</rect>
+
+<circle
+cx="12"
+cy="12"
+r="4">
+</circle>
+
+<circle
+cx="17.5"
+cy="6.5"
+r="1"
+fill="#26352B"
+stroke="none">
+</circle>
+
 </svg>
 
 </a>
@@ -453,18 +481,21 @@ en créations uniques.
 
 <div class="buttons">
 
-<a href="#commande" class="button button-primary">
+<a
+href="#commande"
+class="button button-primary">
 Commander un dessin
 </a>
 
-<a href="#galerie" class="button button-secondary">
+<a
+href="#galerie"
+class="button button-secondary">
 Voir nos créations
 </a>
 
 </div>
 
 </div>
-
 
 <div class="drawing">
 
@@ -509,10 +540,25 @@ pour ceux qui les commandent.
 
 <div class="numbers">
 
-<div class="number"><strong>01</strong>Une idée</div>
-<div class="number"><strong>02</strong>Un dessin</div>
-<div class="number"><strong>03</strong>Une création</div>
-<div class="number"><strong>04</strong>Vos mains</div>
+<div class="number">
+<strong>01</strong>
+Une idée
+</div>
+
+<div class="number">
+<strong>02</strong>
+Un dessin
+</div>
+
+<div class="number">
+<strong>03</strong>
+Une création
+</div>
+
+<div class="number">
+<strong>04</strong>
+Vos mains
+</div>
 
 </div>
 
@@ -533,12 +579,29 @@ La galerie <span>1 Art 4 Hands.</span>
 
 <div class="gallery">
 
-<div class="art"><img src="images/dessin1.jpg" alt="Dessin"></div>
-<div class="art"><img src="images/dessin2.jpg" alt="Dessin"></div>
-<div class="art"><img src="images/dessin3.jpg" alt="Dessin"></div>
-<div class="art"><img src="images/dessin4.jpg" alt="Dessin"></div>
-<div class="art"><img src="images/dessin5.jpg" alt="Dessin"></div>
-<div class="art"><img src="images/dessin6.jpg" alt="Dessin"></div>
+<div class="art">
+<img src="images/dessin1.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img src="images/dessin2.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img src="images/dessin3.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img src="images/dessin4.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img src="images/dessin5.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img src="images/dessin6.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
 
 </div>
 
@@ -564,7 +627,9 @@ Contactez-nous et expliquez-nous votre projet.
 Nous vous répondrons pour discuter de votre demande.
 </p>
 
-<a class="button" href="mailto:contact@1art4hands.fr">
+<a
+class="button"
+href="mailto:contact@1art4hands.fr">
 Nous contacter
 </a>
 
