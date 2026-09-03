@@ -8,6 +8,10 @@
 
 <style>
 
+/* =========================
+   BASE
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,26 +24,49 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #E8E1D4;
-    color: #26352B;
+    color: #F4EFE6;
     line-height: 1.6;
+
+    /* VRAI FOND DU SITE */
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(125, 151, 116, 0.45),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(190, 99, 70, 0.30),
+            transparent 35%
+        ),
+        #24382D;
+
+    overflow-x: hidden;
 }
 
-/* NAVIGATION */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
     padding: 20px 7%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(232, 225, 212, 0.92);
-    backdrop-filter: blur(14px);
+
+    background: rgba(36, 56, 45, 0.82);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
     z-index: 1000;
-    border-bottom: 1px solid rgba(38, 53, 43, 0.12);
 }
 
 .logo {
@@ -49,7 +76,7 @@ nav {
 }
 
 .logo span {
-    color: #B85C43;
+    color: #D58A6C;
     font-weight: 400;
 }
 
@@ -61,17 +88,21 @@ nav ul {
 }
 
 nav a {
-    color: #26352B;
+    color: #F4EFE6;
     text-decoration: none;
     font-size: 15px;
+
     transition: 0.25s ease;
 }
 
 nav a:hover {
-    color: #B85C43;
+    color: #D58A6C;
 }
 
-/* INSTAGRAM */
+
+/* =========================
+   INSTAGRAM
+========================= */
 
 .instagram-link {
     display: flex;
@@ -82,26 +113,36 @@ nav a:hover {
 .instagram-link svg {
     width: 21px;
     height: 21px;
+
     fill: none;
-    stroke: #26352B;
+    stroke: #F4EFE6;
     stroke-width: 1.7;
+
     transition: 0.25s ease;
 }
 
 .instagram-link:hover svg {
-    stroke: #B85C43;
+    stroke: #D58A6C;
     transform: scale(1.12);
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 100vh;
+
     padding: 160px 7% 100px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 60px;
+
+    position: relative;
 }
 
 .hero-text {
@@ -110,31 +151,46 @@ nav a:hover {
 
 .small-title {
     text-transform: uppercase;
+
     letter-spacing: 3px;
+
     font-size: 12px;
     font-weight: bold;
+
     margin-bottom: 20px;
-    color: #58705A;
+
+    color: #A9BE9F;
 }
 
 h1 {
     font-size: clamp(55px, 8vw, 110px);
+
     line-height: 0.95;
+
     letter-spacing: -6px;
+
     margin-bottom: 30px;
 }
 
 h1 span {
     font-weight: 300;
-    color: #B85C43;
+    color: #D58A6C;
 }
 
 .hero p {
     max-width: 520px;
+
     font-size: 19px;
-    color: #596158;
+
+    color: #D6DED3;
+
     margin-bottom: 35px;
 }
+
+
+/* =========================
+   BOUTONS
+========================= */
 
 .buttons {
     display: flex;
@@ -144,88 +200,124 @@ h1 span {
 
 .button {
     display: inline-block;
+
     padding: 14px 24px;
+
     border-radius: 100px;
+
     text-decoration: none;
+
     font-weight: bold;
+
     transition: 0.25s ease;
 }
 
 .button-primary {
-    background: #26352B;
-    color: white;
+    background: #F4EFE6;
+    color: #24382D;
 }
 
 .button-primary:hover {
-    background: #B85C43;
+    background: #D58A6C;
+    color: white;
+
     transform: translateY(-3px);
 }
 
 .button-secondary {
-    border: 1px solid #AEB5A7;
-    color: #26352B;
+    border: 1px solid rgba(244,239,230,0.4);
+
+    color: #F4EFE6;
 }
 
 .button-secondary:hover {
-    background: #D8D0C0;
+    background: rgba(244,239,230,0.10);
 }
 
-/* DESSIN */
+
+/* =========================
+   CADRE DESSIN
+========================= */
 
 .drawing {
     width: 360px;
     height: 460px;
-    border: 1px solid #C9C0AF;
-    background: #F5F0E7;
+
+    border: 1px solid rgba(244,239,230,0.25);
+
+    background: #F4EFE6;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     transform: rotate(3deg);
-    box-shadow: 20px 25px 60px rgba(38,53,43,0.12);
+
+    box-shadow:
+        20px 25px 60px rgba(0,0,0,0.25);
 }
 
 .drawing-inner {
     width: 75%;
     height: 80%;
+
     border: 2px solid #58705A;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 90px;
     font-weight: 900;
+
     letter-spacing: -10px;
+
     color: #B85C43;
 }
 
-/* SECTIONS */
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 110px 7%;
+
+    position: relative;
 }
 
 .section-title {
     font-size: clamp(40px, 6vw, 70px);
+
     letter-spacing: -3px;
+
     margin-bottom: 50px;
 }
 
 .section-title span {
     font-weight: 300;
-    color: #B85C43;
+    color: #D58A6C;
 }
 
-/* PRESENTATION */
+
+/* =========================
+   PRESENTATION
+========================= */
 
 .about {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 70px;
+
     align-items: center;
 }
 
 .about-text {
     font-size: 20px;
-    color: #596158;
+
+    color: #D6DED3;
 }
 
 .about-text p {
@@ -234,41 +326,66 @@ section {
 
 .numbers {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 15px;
 }
 
 .number {
     padding: 35px;
-    background: #D5CDBD;
-    border: 1px solid #C2B8A6;
+
+    background: rgba(244,239,230,0.08);
+
+    border: 1px solid rgba(244,239,230,0.15);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
 }
 
 .number strong {
     display: block;
+
     font-size: 40px;
+
     margin-bottom: 5px;
-    color: #58705A;
+
+    color: #A9BE9F;
 }
 
-/* GALERIE */
+
+/* =========================
+   GALERIE
+========================= */
 
 .gallery {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .art {
     aspect-ratio: 1 / 1;
-    background: #CFC4B0;
+
+    background: #D8CDBB;
+
     overflow: hidden;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.18);
 }
 
 .art img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     transition: 0.4s ease;
 }
 
@@ -276,71 +393,111 @@ section {
     transform: scale(1.05);
 }
 
-/* COMMANDE */
+
+/* =========================
+   COMMANDE
+========================= */
 
 .order {
-    background: #26352B;
-    color: #F5F0E7;
+    background: #F4EFE6;
+
+    color: #24382D;
+
     border-radius: 30px;
+
     padding: 70px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.18);
 }
 
 .order .small-title {
-    color: #B8C5B4;
+    color: #58705A;
 }
 
 .order .section-title span {
-    color: #D58A6C;
+    color: #B85C43;
 }
 
 .order p {
     max-width: 600px;
-    color: #D5DBD2;
+
+    color: #596158;
+
     font-size: 18px;
+
     margin-bottom: 30px;
 }
 
 .order .button {
-    background: #F5F0E7;
-    color: #26352B;
+    background: #24382D;
+    color: #F4EFE6;
 }
 
-/* EQUIPE */
+.order .button:hover {
+    background: #B85C43;
+}
+
+
+/* =========================
+   EQUIPE
+========================= */
 
 .team {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 20px;
 }
 
 .person {
-    background: #F5F0E7;
+    background: rgba(244,239,230,0.08);
+
     padding: 40px;
-    border: 1px solid #C9C0AF;
+
+    border: 1px solid rgba(244,239,230,0.15);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
 }
 
 .person h3 {
     font-size: 28px;
+
     margin-bottom: 10px;
-    color: #B85C43;
+
+    color: #D58A6C;
 }
 
 .person p {
-    color: #596158;
+    color: #D6DED3;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 50px 7%;
-    border-top: 1px solid #C9C0AF;
+
+    border-top: 1px solid rgba(244,239,230,0.15);
+
     display: flex;
+
     justify-content: space-between;
+
     gap: 20px;
-    color: #687068;
+
+    color: #AEB9AA;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 800px) {
 
@@ -358,13 +515,16 @@ footer {
 
     .hero {
         padding: 130px 5% 70px;
+
         flex-direction: column;
+
         align-items: flex-start;
     }
 
     .drawing {
         width: 280px;
         height: 350px;
+
         align-self: center;
     }
 
@@ -393,306 +553,370 @@ footer {
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-<div class="logo">
-1 Art <span>4</span> Hands
-</div>
+    <div class="logo">
+        1 Art <span>4</span> Hands
+    </div>
 
-<ul>
+    <ul>
 
-<li>
-<a href="#accueil">Accueil</a>
-</li>
+        <li>
+            <a href="#accueil">
+                Accueil
+            </a>
+        </li>
 
-<li>
-<a href="#projet">Présentation</a>
-</li>
+        <li>
+            <a href="#projet">
+                Présentation
+            </a>
+        </li>
 
-<li>
-<a href="#commande">Commande</a>
-</li>
+        <li>
+            <a href="#commande">
+                Commande
+            </a>
+        </li>
 
-<li>
-<a
-href="https://www.instagram.com/1art_4hands/?hl=fr"
-target="_blank"
-rel="noopener noreferrer"
-class="instagram-link"
-aria-label="Instagram de 1 Art 4 Hands"
->
+        <li>
 
-<svg viewBox="0 0 24 24">
+            <a
+                href="https://www.instagram.com/1art_4hands/?hl=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram-link"
+                aria-label="Instagram de 1 Art 4 Hands"
+            >
 
-<rect
-x="3"
-y="3"
-width="18"
-height="18"
-rx="5">
-</rect>
+                <svg viewBox="0 0 24 24">
 
-<circle
-cx="12"
-cy="12"
-r="4">
-</circle>
+                    <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="5">
+                    </rect>
 
-<circle
-cx="17.5"
-cy="6.5"
-r="1"
-fill="#26352B"
-stroke="none">
-</circle>
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4">
+                    </circle>
 
-</svg>
+                    <circle
+                        cx="17.5"
+                        cy="6.5"
+                        r="1"
+                        fill="#F4EFE6"
+                        stroke="none">
+                    </circle>
 
-</a>
-</li>
+                </svg>
 
-</ul>
+            </a>
+
+        </li>
+
+    </ul>
 
 </nav>
 
 
+<!-- =========================
+     CONTENU
+========================= -->
+
 <main id="accueil">
+
+
+<!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-text">
+    <div class="hero-text">
 
-<div class="small-title">
-Dessins personnalisés
-</div>
+        <div class="small-title">
+            Dessins personnalisés
+        </div>
 
-<h1>
-1 Art<br>
-<span>4 Hands.</span>
-</h1>
+        <h1>
+            1 Art<br>
+            <span>4 Hands.</span>
+        </h1>
 
-<p>
-Deux passionnés de dessin, une même envie :
-transformer vos idées, vos souvenirs et vos envies
-en créations uniques.
-</p>
+        <p>
+            Deux passionnés de dessin, une même envie :
+            transformer vos idées, vos souvenirs et vos envies
+            en créations uniques.
+        </p>
 
-<div class="buttons">
+        <div class="buttons">
 
-<a
-href="#commande"
-class="button button-primary">
-Commander un dessin
-</a>
+            <a
+                href="#commande"
+                class="button button-primary"
+            >
+                Commander un dessin
+            </a>
 
-<a
-href="#galerie"
-class="button button-secondary">
-Voir nos créations
-</a>
+            <a
+                href="#galerie"
+                class="button button-secondary"
+            >
+                Voir nos créations
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<div class="drawing">
 
-<div class="drawing-inner">
-1<br>4
-</div>
+    <div class="drawing">
 
-</div>
+        <div class="drawing-inner">
+            1<br>4
+        </div>
+
+    </div>
 
 </section>
 
+
+
+<!-- PRESENTATION -->
 
 <section id="projet">
 
-<div class="small-title">
-Notre projet
-</div>
+    <div class="small-title">
+        Notre projet
+    </div>
 
-<h2 class="section-title">
-L'art <span>à quatre mains.</span>
-</h2>
+    <h2 class="section-title">
+        L'art <span>à quatre mains.</span>
+    </h2>
 
-<div class="about">
+    <div class="about">
 
-<div class="about-text">
+        <div class="about-text">
 
-<p>
-1 Art 4 Hands est un projet créé par deux jeunes passionnés de dessin.
-</p>
+            <p>
+                1 Art 4 Hands est un projet créé
+                par deux jeunes passionnés de dessin.
+            </p>
 
-<p>
-Nous réalisons des dessins personnalisés sur commande,
-en donnant à chaque création une attention particulière.
-</p>
+            <p>
+                Nous réalisons des dessins personnalisés
+                sur commande, en donnant à chaque création
+                une attention particulière.
+            </p>
 
-<p>
-Notre objectif : créer des œuvres qui ont du sens
-pour ceux qui les commandent.
-</p>
+            <p>
+                Notre objectif : créer des œuvres qui ont
+                du sens pour ceux qui les commandent.
+            </p>
 
-</div>
+        </div>
 
-<div class="numbers">
 
-<div class="number">
-<strong>01</strong>
-Une idée
-</div>
+        <div class="numbers">
 
-<div class="number">
-<strong>02</strong>
-Un dessin
-</div>
+            <div class="number">
+                <strong>01</strong>
+                Une idée
+            </div>
 
-<div class="number">
-<strong>03</strong>
-Une création
-</div>
+            <div class="number">
+                <strong>02</strong>
+                Un dessin
+            </div>
 
-<div class="number">
-<strong>04</strong>
-Vos mains
-</div>
+            <div class="number">
+                <strong>03</strong>
+                Une création
+            </div>
 
-</div>
+            <div class="number">
+                <strong>04</strong>
+                Vos mains
+            </div>
 
-</div>
+        </div>
+
+    </div>
 
 </section>
 
+
+
+<!-- GALERIE -->
 
 <section id="galerie">
 
-<div class="small-title">
-Nos créations
-</div>
+    <div class="small-title">
+        Nos créations
+    </div>
 
-<h2 class="section-title">
-La galerie <span>1 Art 4 Hands.</span>
-</h2>
+    <h2 class="section-title">
+        La galerie <span>1 Art 4 Hands.</span>
+    </h2>
 
-<div class="gallery">
 
-<div class="art">
-<img src="images/dessin1.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
+    <div class="gallery">
 
-<div class="art">
-<img src="images/dessin2.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
+        <div class="art">
+            <img
+                src="images/dessin1.jpg"
+                alt="Dessin réalisé par 1 Art 4 Hands">
+        </div>
 
-<div class="art">
-<img src="images/dessin3.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
+        <div class="art">
+            <img
+                src="images/dessin2.jpg"
+                alt="Dessin réalisé par 1 Art 4 Hands">
+        </div>
 
-<div class="art">
-<img src="images/dessin4.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
+        <div class="art">
+            <img
+                src="images/dessin3.jpg"
+                alt="Dessin réalisé par 1 Art 4 Hands">
+        </div>
 
-<div class="art">
-<img src="images/dessin5.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
+        <div class="art">
+            <img
+                src="images/dessin4.jpg"
+                alt="Dessin réalisé par 1 Art 4 Hands">
+        </div>
 
-<div class="art">
-<img src="images/dessin6.jpg" alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
+        <div class="art">
+            <img
+                src="images/dessin5.jpg"
+                alt="Dessin réalisé par 1 Art 4 Hands">
+        </div>
 
-</div>
+        <div class="art">
+            <img
+                src="images/dessin6.jpg"
+                alt="Dessin réalisé par 1 Art 4 Hands">
+        </div>
+
+    </div>
 
 </section>
 
+
+
+<!-- COMMANDE -->
 
 <section id="commande">
 
-<div class="order">
+    <div class="order">
 
-<div class="small-title">
-Une idée en tête ?
-</div>
+        <div class="small-title">
+            Une idée en tête ?
+        </div>
 
-<h2 class="section-title">
-Faisons-la<br>
-<span>dessiner.</span>
-</h2>
+        <h2 class="section-title">
+            Faisons-la<br>
+            <span>dessiner.</span>
+        </h2>
 
-<p>
-Vous avez une idée de dessin personnalisé ?
-Contactez-nous et expliquez-nous votre projet.
-Nous vous répondrons pour discuter de votre demande.
-</p>
+        <p>
+            Vous avez une idée de dessin personnalisé ?
+            Contactez-nous et expliquez-nous votre projet.
+            Nous vous répondrons pour discuter de votre demande.
+        </p>
 
-<a
-class="button"
-href="mailto:contact@1art4hands.fr">
-Nous contacter
-</a>
+        <a
+            class="button"
+            href="mailto:contact@1art4hands.fr"
+        >
+            Nous contacter
+        </a>
 
-</div>
+    </div>
 
 </section>
 
+
+
+<!-- EQUIPE -->
 
 <section>
 
-<div class="small-title">
-Qui sommes-nous ?
-</div>
+    <div class="small-title">
+        Qui sommes-nous ?
+    </div>
 
-<h2 class="section-title">
-Deux personnes,<br>
-<span>un projet.</span>
-</h2>
+    <h2 class="section-title">
+        Deux personnes,<br>
+        <span>un projet.</span>
+    </h2>
 
-<div class="team">
 
-<div class="person">
+    <div class="team">
 
-<h3>Prénom</h3>
+        <div class="person">
 
-<p>
-Passionné de dessin et de création,
-il participe à la réalisation des œuvres
-et au développement du projet.
-</p>
+            <h3>
+                Prénom
+            </h3>
 
-</div>
+            <p>
+                Passionné de dessin et de création,
+                il participe à la réalisation des œuvres
+                et au développement du projet.
+            </p>
 
-<div class="person">
+        </div>
 
-<h3>Prénom</h3>
 
-<p>
-Passionné de dessin et de création,
-il participe à la réalisation des œuvres
-et au développement du projet.
-</p>
+        <div class="person">
 
-</div>
+            <h3>
+                Prénom
+            </h3>
 
-</div>
+            <p>
+                Passionné de dessin et de création,
+                il participe à la réalisation des œuvres
+                et au développement du projet.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
+
 
 </main>
 
 
+
+<!-- FOOTER -->
+
 <footer>
 
-<div>
-© 2026 — 1 Art 4 Hands
-</div>
+    <div>
+        © 2026 — 1 Art 4 Hands
+    </div>
 
-<div>
-Dessiné à quatre mains.
-</div>
+    <div>
+        Dessiné à quatre mains.
+    </div>
 
 </footer>
+
 
 </body>
 </html>
