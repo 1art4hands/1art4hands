@@ -3,343 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1 Art 4 Hands — Dessins personnalisés</title>
+<title>1 Art 4 Hands</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#26383D;
-    color:#F2EDE4;
-    line-height:1.6;
-    overflow-x:hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:76px;
-    padding:0 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(38,56,61,.95);
-    border-bottom:1px solid rgba(242,237,228,.12);
-    z-index:1000;
+html {
+    scroll-behavior: smooth;
 }
 
-.logo{
-    font-size:21px;
-    font-weight:700;
-    letter-spacing:-.8px;
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #26383D;
+    color: #F2EDE4;
+    line-height: 1.6;
 }
 
-.logo span{color:#C18A62;font-weight:400}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:30px;
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: rgba(38,56,61,0.96);
+    border-bottom: 1px solid rgba(242,237,228,0.12);
 }
 
-nav a{
-    color:#E4DED4;
-    text-decoration:none;
-    font-size:14px;
-    transition:.2s;
+.logo {
+    font-size: 22px;
+    letter-spacing: 2px;
 }
 
-nav a:hover{color:#C18A62}
-
-.instagram-link{
-    display:flex;
-    align-items:center;
+nav div {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
-.instagram-link svg{
-    width:21px;
-    height:21px;
-    fill:none;
-    stroke:#E4DED4;
-    stroke-width:1.7;
-    transition:.2s;
+nav a {
+    color: #E4DED4;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
 }
 
-.instagram-link:hover svg{
-    stroke:#C18A62;
-    transform:scale(1.08);
+nav a:hover {
+    color: #C18A62;
 }
 
-.hero{
-    min-height:100vh;
-    padding:150px 8% 100px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:80px;
+.instagram {
+    font-size: 22px;
 }
 
-.small-title{
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:11px;
-    color:#9FB1B3;
-    margin-bottom:25px;
+.hero {
+    min-height: 100vh;
+    padding: 180px 10% 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
 }
 
-h1{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:clamp(60px,8vw,105px);
-    line-height:.92;
-    font-weight:400;
-    letter-spacing:-5px;
-    margin-bottom:35px;
+.small-title {
+    color: #9FB1B3;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
-h1 span,.section-title span{color:#C18A62}
-
-.hero p{
-    max-width:540px;
-    color:#C9D0D0;
-    font-size:18px;
-    line-height:1.8;
-    margin-bottom:35px;
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    font-weight: normal;
+    line-height: .95;
+    margin: 25px 0;
 }
 
-.buttons{
-    display:flex;
-    gap:22px;
-    flex-wrap:wrap;
+h1 span,
+.section-title span {
+    color: #C18A62;
 }
 
-.button{
-    display:inline-block;
-    padding:13px 22px;
-    text-decoration:none;
-    font-size:14px;
-    transition:.2s;
+.hero p {
+    max-width: 620px;
+    color: #C9D0D0;
+    font-size: 18px;
 }
 
-.button-primary{
-    background:#F2EDE4;
-    color:#26383D;
+.button-primary,
+.button-secondary {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: .3s;
 }
 
-.button-primary:hover{
-    background:#C18A62;
-    color:white;
+.button-primary {
+    background: #F2EDE4;
+    color: #26383D;
 }
 
-.button-secondary{
-    color:#F2EDE4;
-    border-bottom:1px solid rgba(242,237,228,.5);
-    padding-left:0;
-    padding-right:0;
+.button-primary:hover {
+    background: #C18A62;
+    color: white;
 }
 
-.button-secondary:hover{
-    color:#C18A62;
+section {
+    padding: 120px 10%;
 }
 
-.drawing{
-    width:360px;
-    aspect-ratio:.78;
-    background:#F2EDE4;
-    padding:25px;
-    transform:rotate(2deg);
-    box-shadow:18px 20px 0 rgba(0,0,0,.18);
-    margin:auto;
+.section-title {
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 60px;
 }
 
-.drawing-inner{
-    width:100%;
-    height:100%;
-    border:1px solid #60777A;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:100px;
-    line-height:.75;
-    color:#B36F55;
-    letter-spacing:-15px;
+.about {
+    max-width: 1100px;
+    margin: auto;
 }
 
-section{padding:115px 8%}
-
-.section-title{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:clamp(45px,6vw,72px);
-    line-height:1;
-    font-weight:400;
-    letter-spacing:-3px;
-    margin-bottom:55px;
+.about-text {
+    max-width: 700px;
+    color: #C9D0D0;
+    font-size: 18px;
 }
 
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
+.people {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 50px;
 }
 
-.about-text{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:22px;
-    line-height:1.65;
-    color:#D9DFDF;
+.person {
+    padding: 35px;
+    background: rgba(242,237,228,0.07);
+    border: 1px solid rgba(242,237,228,0.14);
 }
 
-.about-text p{margin-bottom:25px}
-
-.about-side{
-    color:#AEBABC;
-    font-size:15px;
-    line-height:1.8;
+.person h3 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 15px;
 }
 
-.about-side p{margin-bottom:25px}
-
-.line{
-    height:1px;
-    background:rgba(242,237,228,.15);
-    margin-bottom:25px;
+.person p {
+    color: #C9D0D0;
 }
 
-.signature{
-    font-family:Georgia,"Times New Roman",serif;
-    color:#C18A62;
-    font-size:23px;
-    font-style:italic;
+.order {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 70px;
+    background: #30464B;
+    border: 1px solid rgba(242,237,228,0.10);
 }
 
-#galerie{
-    background:#E5DED3;
-    color:#26383D;
+.order p {
+    color: #CBD2D1;
+    max-width: 650px;
 }
 
-#galerie .small-title{color:#637579}
-#galerie .section-title span{color:#B36F55}
-
-.gallery-intro{
-    max-width:600px;
-    color:#596568;
-    margin-bottom:50px;
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #F2EDE4;
+    color: #26383D;
+    text-decoration: none;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.button:hover {
+    background: #C18A62;
+    color: white;
 }
 
-.art{
-    overflow:hidden;
-    background:#D3CCC1;
+footer {
+    padding: 40px 10%;
+    border-top: 1px solid rgba(242,237,228,.1);
+    color: #9FB1B3;
+    text-align: center;
 }
 
-.art:nth-child(2),.art:nth-child(5){margin-top:40px}
-
-.art img{
-    display:block;
-    width:100%;
-    aspect-ratio:.88;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.art:hover img{transform:scale(1.025)}
-
-.order{
-    background:#30464B;
-    color:#F2EDE4;
-    border:1px solid rgba(242,237,228,.1);
-    border-radius:28px;
-    padding:70px;
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
-}
-
-.order .small-title{color:#9FB1B3}
-.order .section-title span{color:#C18A62}
-
-.order p{
-    max-width:600px;
-    color:#CBD2D1;
-    font-size:17px;
-    line-height:1.8;
-    margin-bottom:30px;
-}
-
-.order .button{
-    background:#F2EDE4;
-    color:#26383D;
-}
-
-.order .button:hover{
-    background:#C18A62;
-    color:white;
-}
-
-.team{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-}
-
-.person{
-    border-top:1px solid rgba(242,237,228,.18);
-    padding-top:25px;
-}
-
-.person h3{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:29px;
-    font-weight:400;
-    margin-bottom:10px;
-}
-
-.person p{
-    color:#AEBABC;
-    font-size:15px;
-}
-
-footer{
-    padding:35px 8%;
-    border-top:1px solid rgba(242,237,228,.12);
-    display:flex;
-    justify-content:space-between;
-    color:#89999C;
-    font-size:12px;
-}
-
-footer a{text-decoration:none}
-footer a:hover{color:#C18A62}
-
-@media(max-width:800px){
-    nav{padding:0 5%}
-    nav ul{gap:15px}
-    nav a{font-size:12px}
-    .hero{
-        grid-template-columns:1fr;
-        padding:125px 7% 80px;
+@media(max-width:700px) {
+    nav {
+        padding: 18px 5%;
     }
-    .drawing{width:280px}
-    section{padding:85px 7%}
-    .about,.team{grid-template-columns:1fr}
-    .gallery{grid-template-columns:1fr 1fr}
-    .order{padding:50px 30px}
-}
 
-@media(max-width:500px){
-    nav ul{gap:10px}
-    nav a{font-size:11px}
-    .logo{font-size:17px}
-    .gallery{grid-template-columns:1fr}
-    .art:nth-child(2),.art:nth-child(5){margin-top:0}
+    nav div {
+        gap: 15px;
+    }
+
+    .people {
+        grid-template-columns: 1fr;
+    }
+
+    .order {
+        padding: 40px 25px;
+    }
 }
 </style>
 </head>
@@ -347,185 +217,91 @@ footer a:hover{color:#C18A62}
 <body>
 
 <nav>
-    <div class="logo">1 Art <span>4</span> Hands</div>
+    <div class="logo">1 ART 4 HANDS</div>
 
-    <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#presentation">Présentation</a></li>
-        <li><a href="#commande">Commande</a></li>
-
-        <li>
-            <a class="instagram-link"
-               href="https://www.instagram.com/1art_4hands/?hl=fr"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Instagram">
-
-                <svg viewBox="0 0 24 24">
-                    <rect x="3" y="3" width="18" height="18" rx="5"/>
-                    <circle cx="12" cy="12" r="4"/>
-                    <circle cx="17.5" cy="6.5" r="1"
-                            fill="#E4DED4" stroke="none"/>
-                </svg>
-            </a>
-        </li>
-    </ul>
+    <div>
+        <a href="#accueil">Accueil</a>
+        <a href="#presentation">Présentation</a>
+        <a href="#commande">Commande</a>
+        <a class="instagram" href="https://www.instagram.com/1art_4hands/?hl=fr" target="_blank">◎</a>
+    </div>
 </nav>
 
-<main id="accueil">
+<header class="hero" id="accueil">
+    <div class="small-title">Dessin · Création · Collaboration</div>
 
-<section class="hero">
-    <div>
-        <div class="small-title">Dessins personnalisés</div>
+    <h1>
+        L'art<br>
+        à <span>quatre mains.</span>
+    </h1>
 
-        <h1>
-            1 Art<br>
-            <span>4 Hands.</span>
-        </h1>
-
-        <p>
-            Deux passionnés de dessin, une même envie :
-            transformer vos idées, vos souvenirs et vos envies
-            en créations uniques.
-        </p>
-
-        <div class="buttons">
-            <a href="#commande" class="button button-primary">
-                Commander un dessin
-            </a>
-
-            <a href="#galerie" class="button button-secondary">
-                Voir nos créations
-            </a>
-        </div>
-    </div>
-
-    <div class="drawing">
-        <div class="drawing-inner">1<br>4</div>
-    </div>
-</section>
-
-<section id="presentation">
-    <div class="small-title">Notre projet</div>
-
-    <h2 class="section-title">
-        L'art <span>à quatre mains.</span>
-    </h2>
-
-    <div class="about">
-        <div class="about-text">
-            <p>
-                1 Art 4 Hands est un projet créé par deux
-                jeunes passionnés de dessin.
-            </p>
-
-            <p>
-                Nous réalisons des dessins personnalisés
-                en donnant à chaque création une attention
-                particulière.
-            </p>
-        </div>
-
-        <div class="about-side">
-            <div class="line"></div>
-
-            <p>
-                Chaque commande commence par une idée,
-                une photo, un souvenir ou simplement
-                une envie de créer quelque chose d'unique.
-            </p>
-
-            <p>
-                Nous cherchons ensuite la meilleure manière
-                de transformer cette idée en dessin.
-            </p>
-
-            <div class="signature">Dessiné à quatre mains.</div>
-        </div>
-    </div>
-</section>
-
-<section id="galerie">
-    <div class="small-title">Nos créations</div>
-
-    <h2 class="section-title">
-        La galerie <span>1 Art 4 Hands.</span>
-    </h2>
-
-    <p class="gallery-intro">
-        Découvrez quelques-unes de nos créations.
-        La galerie évoluera au fil de nos nouveaux projets.
+    <p>
+        Deux artistes, une idée et un dessin créé spécialement pour vous.
+        Découvrez notre univers et commandez votre propre création.
     </p>
 
-    <div class="gallery">
-        <div class="art"><img src="images/dessin1.jpg" alt="Dessin"></div>
-        <div class="art"><img src="images/dessin2.jpg" alt="Dessin"></div>
-        <div class="art"><img src="images/dessin3.jpg" alt="Dessin"></div>
-        <div class="art"><img src="images/dessin4.jpg" alt="Dessin"></div>
-        <div class="art"><img src="images/dessin5.jpg" alt="Dessin"></div>
-        <div class="art"><img src="images/dessin6.jpg" alt="Dessin"></div>
+    <a href="#commande" class="button-primary">Commander un dessin</a>
+</header>
+
+<section id="presentation">
+    <div class="about">
+        <div class="small-title">Notre histoire</div>
+
+        <h2 class="section-title">
+            Deux regards.<br>
+            <span>Une création.</span>
+        </h2>
+
+        <p class="about-text">
+            Nous sommes deux jeunes artistes réunis autour d'une même envie :
+            transformer vos idées, vos souvenirs et vos inspirations en dessins
+            uniques réalisés à quatre mains.
+        </p>
+
+        <div class="people">
+            <div class="person">
+                <h3>Artiste 01</h3>
+                <p>
+                    Passionné par le dessin et la création, il apporte son
+                    univers graphique aux projets.
+                </p>
+            </div>
+
+            <div class="person">
+                <h3>Artiste 02</h3>
+                <p>
+                    Un autre regard, une autre sensibilité et une autre manière
+                    d'interpréter chaque idée.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="commande">
     <div class="order">
-        <div class="small-title">Une idée en tête ?</div>
+        <div class="small-title">Votre projet</div>
 
         <h2 class="section-title">
-            Faisons-la<br>
-            <span>dessiner.</span>
+            Commandez votre <span>dessin.</span>
         </h2>
 
         <p>
-            Vous avez une idée de dessin personnalisé ?
-            Expliquez-nous votre projet et nous pourrons
-            échanger avec vous pour lui donner forme.
+            Vous avez une idée, une photo ou simplement une envie ?
+            Contactez-nous afin de discuter de votre projet et de créer
+            ensemble une illustration personnalisée.
         </p>
 
-        <a href="mailto:contact@1art4hands.fr" class="button">
-            Nous contacter
+        <a href="https://www.instagram.com/1art_4hands/?hl=fr"
+           target="_blank"
+           class="button">
+           Nous contacter
         </a>
     </div>
 </section>
 
-<section>
-    <div class="small-title">Derrière le projet</div>
-
-    <h2 class="section-title">
-        Deux personnes,<br>
-        <span>un projet.</span>
-    </h2>
-
-    <div class="team">
-        <div class="person">
-            <h3>Prénom</h3>
-            <p>
-                Passionné de dessin et de création,
-                il participe à la réalisation des œuvres
-                et au développement du projet.
-            </p>
-        </div>
-
-        <div class="person">
-            <h3>Prénom</h3>
-            <p>
-                Passionné de dessin et de création,
-                il participe à la réalisation des œuvres
-                et au développement du projet.
-            </p>
-        </div>
-    </div>
-</section>
-
-</main>
-
 <footer>
-    <div>© 2026 — 1 Art 4 Hands</div>
-
-    <a href="https://www.instagram.com/1art_4hands/?hl=fr"
-       target="_blank">
-        Instagram
-    </a>
+    © 2026 — 1 Art 4 Hands
 </footer>
 
 </body>
