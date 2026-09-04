@@ -1,565 +1,883 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>1 Art 4 Hands — Dessins personnalisés</title>
-
-<style>
-
-/* =========================
-   BASE
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #F4EFE6;
-    line-height: 1.6;
-
-    /* VRAI FOND DU SITE */
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(125, 151, 116, 0.45),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            rgba(190, 99, 70, 0.30),
-            transparent 35%
-        ),
-        #24382D;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    overflow-x: hidden;
-}
+    <title>1 Art 4 Hands — Dessins personnalisés</title>
 
+    <style>
 
-/* =========================
-   NAVIGATION
-========================= */
+        /* =====================================================
+           BASE
+        ===================================================== */
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    padding: 20px 7%;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #26382F;
+            color: #F1ECE2;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    background: rgba(36, 56, 45, 0.82);
-    backdrop-filter: blur(18px);
+        a {
+            color: inherit;
+        }
 
-    border-bottom: 1px solid rgba(255,255,255,0.12);
 
-    z-index: 1000;
-}
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
-.logo {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
 
-.logo span {
-    color: #D58A6C;
-    font-weight: 400;
-}
+            width: 100%;
 
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-}
+            height: 76px;
 
-nav a {
-    color: #F4EFE6;
-    text-decoration: none;
-    font-size: 15px;
+            padding: 0 6%;
 
-    transition: 0.25s ease;
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-nav a:hover {
-    color: #D58A6C;
-}
+            background: rgba(38, 56, 47, 0.96);
 
+            border-bottom: 1px solid rgba(241, 236, 226, 0.12);
 
-/* =========================
-   INSTAGRAM
-========================= */
+            z-index: 1000;
+        }
 
-.instagram-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.instagram-link svg {
-    width: 21px;
-    height: 21px;
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.7px;
+        }
 
-    fill: none;
-    stroke: #F4EFE6;
-    stroke-width: 1.7;
+        .logo span {
+            color: #C96E50;
+            font-weight: 400;
+        }
 
-    transition: 0.25s ease;
-}
 
-.instagram-link:hover svg {
-    stroke: #D58A6C;
-    transform: scale(1.12);
-}
+        nav ul {
+            list-style: none;
 
+            display: flex;
+            align-items: center;
 
-/* =========================
-   HERO
-========================= */
+            gap: 30px;
+        }
 
-.hero {
-    min-height: 100vh;
+        nav a {
+            text-decoration: none;
 
-    padding: 160px 7% 100px;
+            font-size: 14px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+            color: #E9E3D8;
 
-    gap: 60px;
+            transition: color 0.2s ease;
+        }
 
-    position: relative;
-}
+        nav a:hover {
+            color: #D07A5B;
+        }
 
-.hero-text {
-    max-width: 650px;
-}
 
-.small-title {
-    text-transform: uppercase;
+        /* =====================================================
+           INSTAGRAM
+        ===================================================== */
 
-    letter-spacing: 3px;
+        .instagram-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    font-size: 12px;
-    font-weight: bold;
+        .instagram-link svg {
+            width: 20px;
+            height: 20px;
 
-    margin-bottom: 20px;
+            fill: none;
+            stroke: #E9E3D8;
+            stroke-width: 1.6;
 
-    color: #A9BE9F;
-}
+            transition: all 0.2s ease;
+        }
 
-h1 {
-    font-size: clamp(55px, 8vw, 110px);
+        .instagram-link:hover svg {
+            stroke: #D07A5B;
+        }
 
-    line-height: 0.95;
 
-    letter-spacing: -6px;
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-    margin-bottom: 30px;
-}
+        .hero {
+            min-height: 100vh;
 
-h1 span {
-    font-weight: 300;
-    color: #D58A6C;
-}
+            padding: 150px 8% 100px;
 
-.hero p {
-    max-width: 520px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
 
-    font-size: 19px;
+            align-items: center;
 
-    color: #D6DED3;
+            gap: 90px;
+        }
 
-    margin-bottom: 35px;
-}
 
+        .hero-text {
+            max-width: 700px;
+        }
 
-/* =========================
-   BOUTONS
-========================= */
 
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        .eyebrow {
+            margin-bottom: 28px;
 
-.button {
-    display: inline-block;
+            font-size: 11px;
 
-    padding: 14px 24px;
+            text-transform: uppercase;
 
-    border-radius: 100px;
+            letter-spacing: 3px;
 
-    text-decoration: none;
+            color: #A9B7A5;
+        }
 
-    font-weight: bold;
 
-    transition: 0.25s ease;
-}
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
 
-.button-primary {
-    background: #F4EFE6;
-    color: #24382D;
-}
+            font-size: clamp(60px, 8vw, 105px);
 
-.button-primary:hover {
-    background: #D58A6C;
-    color: white;
+            line-height: 0.92;
 
-    transform: translateY(-3px);
-}
+            font-weight: 400;
 
-.button-secondary {
-    border: 1px solid rgba(244,239,230,0.4);
+            letter-spacing: -5px;
 
-    color: #F4EFE6;
-}
+            margin-bottom: 38px;
+        }
 
-.button-secondary:hover {
-    background: rgba(244,239,230,0.10);
-}
 
+        .hero h1 span {
+            color: #D07859;
+            font-style: italic;
+        }
 
-/* =========================
-   CADRE DESSIN
-========================= */
 
-.drawing {
-    width: 360px;
-    height: 460px;
+        .hero-intro {
+            max-width: 540px;
 
-    border: 1px solid rgba(244,239,230,0.25);
+            color: #C9D0C8;
 
-    background: #F4EFE6;
+            font-size: 18px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+            line-height: 1.8;
 
-    transform: rotate(3deg);
+            margin-bottom: 38px;
+        }
 
-    box-shadow:
-        20px 25px 60px rgba(0,0,0,0.25);
-}
 
-.drawing-inner {
-    width: 75%;
-    height: 80%;
+        /* =====================================================
+           BOUTONS
+        ===================================================== */
 
-    border: 2px solid #58705A;
+        .buttons {
+            display: flex;
+            align-items: center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+            gap: 25px;
 
-    font-size: 90px;
-    font-weight: 900;
+            flex-wrap: wrap;
+        }
 
-    letter-spacing: -10px;
 
-    color: #B85C43;
-}
+        .button {
+            display: inline-block;
 
+            padding: 12px 21px;
 
-/* =========================
-   SECTIONS
-========================= */
+            text-decoration: none;
 
-section {
-    padding: 110px 7%;
+            font-size: 14px;
 
-    position: relative;
-}
+            transition: all 0.2s ease;
+        }
 
-.section-title {
-    font-size: clamp(40px, 6vw, 70px);
 
-    letter-spacing: -3px;
+        .button-primary {
+            background: #F1ECE2;
 
-    margin-bottom: 50px;
-}
+            color: #26382F;
 
-.section-title span {
-    font-weight: 300;
-    color: #D58A6C;
-}
+            border: 1px solid #F1ECE2;
+        }
 
+        .button-primary:hover {
+            background: #D07859;
 
-/* =========================
-   PRESENTATION
-========================= */
+            border-color: #D07859;
 
-.about {
-    display: grid;
+            color: #FFFFFF;
+        }
 
-    grid-template-columns: 1fr 1fr;
 
-    gap: 70px;
+        .button-secondary {
+            border-bottom: 1px solid rgba(241,236,226,0.5);
 
-    align-items: center;
-}
+            color: #F1ECE2;
 
-.about-text {
-    font-size: 20px;
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-    color: #D6DED3;
-}
+        .button-secondary:hover {
+            color: #D07859;
 
-.about-text p {
-    margin-bottom: 20px;
-}
+            border-color: #D07859;
+        }
 
-.numbers {
-    display: grid;
 
-    grid-template-columns: 1fr 1fr;
+        /* =====================================================
+           VISUEL HERO
+        ===================================================== */
 
-    gap: 15px;
-}
+        .hero-art {
+            display: flex;
 
-.number {
-    padding: 35px;
+            justify-content: center;
 
-    background: rgba(244,239,230,0.08);
+            position: relative;
+        }
 
-    border: 1px solid rgba(244,239,230,0.15);
 
-    border-radius: 15px;
+        .paper {
+            width: min(390px, 100%);
 
-    backdrop-filter: blur(8px);
-}
+            aspect-ratio: 0.78;
 
-.number strong {
-    display: block;
+            background: #E9E1D3;
 
-    font-size: 40px;
+            padding: 25px;
 
-    margin-bottom: 5px;
+            box-shadow: 18px 20px 0 rgba(18, 29, 24, 0.22);
 
-    color: #A9BE9F;
-}
+            transform: rotate(2deg);
+        }
 
 
-/* =========================
-   GALERIE
-========================= */
+        .paper-inner {
+            width: 100%;
+            height: 100%;
 
-.gallery {
-    display: grid;
+            border: 1px solid #788675;
 
-    grid-template-columns: repeat(3, 1fr);
+            display: flex;
 
-    gap: 20px;
-}
+            align-items: center;
+            justify-content: center;
 
-.art {
-    aspect-ratio: 1 / 1;
+            position: relative;
+        }
 
-    background: #D8CDBB;
 
-    overflow: hidden;
+        .paper-title {
+            position: absolute;
 
-    border-radius: 8px;
+            top: 22px;
+            left: 22px;
 
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.18);
-}
+            color: #26382F;
 
-.art img {
-    width: 100%;
-    height: 100%;
+            font-size: 10px;
 
-    object-fit: cover;
+            letter-spacing: 2px;
 
-    transition: 0.4s ease;
-}
+            text-transform: uppercase;
+        }
 
-.art:hover img {
-    transform: scale(1.05);
-}
 
+        .paper-mark {
+            font-family: Georgia, "Times New Roman", serif;
 
-/* =========================
-   COMMANDE
-========================= */
+            font-size: 110px;
 
-   .order {
-    background: #2B4034;
-    color: #F4EFE6;
-    border: 1px solid rgba(244, 239, 230, 0.10);
-    border-radius: 30px;
-    padding: 70px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
-}
+            line-height: 0.8;
 
-.order .small-title {
-    color: #A9BE9F;
-}
+            color: #B85F45;
 
-.order .section-title span {
-    color: #D58A6C;
-}
+            letter-spacing: -20px;
 
-.order p {
-    max-width: 600px;
-    color: #D6DED3;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+            transform: translateX(-8px);
+        }
 
-.order .button {
-    background: #F4EFE6;
-    color: #24382D;
-}
 
-.order .button:hover {
-    background: #D58A6C;
-    color: #FFFFFF;
-}
+        .paper-number {
+            position: absolute;
 
+            bottom: 20px;
+            right: 22px;
 
-/* =========================
-   EQUIPE
-========================= */
+            color: #526356;
 
-.team {
-    display: grid;
+            font-size: 10px;
 
-    grid-template-columns: 1fr 1fr;
+            letter-spacing: 1px;
+        }
 
-    gap: 20px;
-}
 
-.person {
-    background: rgba(244,239,230,0.08);
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
 
-    padding: 40px;
+        section {
+            padding: 120px 8%;
+        }
 
-    border: 1px solid rgba(244,239,230,0.15);
 
-    border-radius: 15px;
+        .section-label {
+            font-size: 11px;
 
-    backdrop-filter: blur(8px);
-}
+            text-transform: uppercase;
 
-.person h3 {
-    font-size: 28px;
+            letter-spacing: 3px;
 
-    margin-bottom: 10px;
+            color: #9EAD9B;
 
-    color: #D58A6C;
-}
+            margin-bottom: 24px;
+        }
 
-.person p {
-    color: #D6DED3;
-}
 
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
 
-/* =========================
-   FOOTER
-========================= */
+            font-size: clamp(43px, 6vw, 72px);
 
-footer {
-    padding: 50px 7%;
+            line-height: 1;
 
-    border-top: 1px solid rgba(244,239,230,0.15);
+            font-weight: 400;
 
-    display: flex;
+            letter-spacing: -3px;
 
-    justify-content: space-between;
+            margin-bottom: 55px;
+        }
 
-    gap: 20px;
 
-    color: #AEB9AA;
-}
+        .section-title em {
+            color: #D07859;
 
+            font-style: italic;
+        }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media (max-width: 800px) {
+        /* =====================================================
+           PRESENTATION
+        ===================================================== */
 
-    nav {
-        padding: 18px 5%;
-    }
+        .about {
+            display: grid;
 
-    nav ul {
-        gap: 14px;
-    }
+            grid-template-columns: 1fr 1fr;
 
-    nav a {
-        font-size: 12px;
-    }
+            gap: 100px;
 
-    .hero {
-        padding: 130px 5% 70px;
+            align-items: start;
+        }
 
-        flex-direction: column;
 
-        align-items: flex-start;
-    }
+        .about-main {
+            max-width: 600px;
+        }
 
-    .drawing {
-        width: 280px;
-        height: 350px;
 
-        align-self: center;
-    }
+        .about-main p {
+            font-family: Georgia, "Times New Roman", serif;
 
-    section {
-        padding: 80px 5%;
-    }
+            font-size: 23px;
 
-    .about,
-    .team {
-        grid-template-columns: 1fr;
-    }
+            line-height: 1.6;
 
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
+            color: #E2DDD3;
 
-    .order {
-        padding: 40px 25px;
-    }
+            margin-bottom: 24px;
+        }
 
-    footer {
-        flex-direction: column;
-    }
-}
 
-</style>
+        .about-side {
+            padding-top: 10px;
+        }
+
+
+        .about-side p {
+            color: #AEB9AD;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 28px;
+        }
+
+
+        .line {
+            width: 100%;
+
+            height: 1px;
+
+            background: rgba(241,236,226,0.16);
+
+            margin-bottom: 25px;
+        }
+
+
+        .signature {
+            font-family: Georgia, "Times New Roman", serif;
+
+            color: #D07859;
+
+            font-size: 24px;
+
+            font-style: italic;
+        }
+
+
+        /* =====================================================
+           GALERIE
+        ===================================================== */
+
+        #galerie {
+            background: #E9E1D3;
+
+            color: #26382F;
+        }
+
+
+        #galerie .section-label {
+            color: #697969;
+        }
+
+
+        #galerie .section-title {
+            color: #26382F;
+        }
+
+
+        #galerie .section-title em {
+            color: #B85F45;
+        }
+
+
+        .gallery-intro {
+            max-width: 600px;
+
+            color: #59665B;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            margin-bottom: 55px;
+        }
+
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 28px;
+        }
+
+
+        .art {
+            position: relative;
+
+            background: #D8CFBF;
+
+            overflow: hidden;
+        }
+
+
+        .art:nth-child(2) {
+            margin-top: 45px;
+        }
+
+
+        .art:nth-child(5) {
+            margin-top: 45px;
+        }
+
+
+        .art img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            aspect-ratio: 0.88;
+
+            object-fit: cover;
+
+            transition: transform 0.4s ease;
+        }
+
+
+        .art:hover img {
+            transform: scale(1.025);
+        }
+
+
+        /* =====================================================
+           COMMANDE
+        ===================================================== */
+
+        #commande {
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+
+
+        .order {
+            background: #2D4338;
+
+            border: 1px solid rgba(241,236,226,0.12);
+
+            padding: 75px 8%;
+
+            position: relative;
+        }
+
+
+        .order::before {
+            content: "";
+
+            position: absolute;
+
+            top: 24px;
+            left: 24px;
+
+            width: 35px;
+            height: 1px;
+
+            background: #C96E50;
+        }
+
+
+        .order .section-title {
+            margin-bottom: 30px;
+        }
+
+
+        .order-text {
+            max-width: 620px;
+
+            color: #C9D1C9;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 35px;
+        }
+
+
+        .order-button {
+            display: inline-block;
+
+            padding: 13px 24px;
+
+            background: #F1ECE2;
+
+            color: #26382F;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            border: 1px solid #F1ECE2;
+
+            transition: all 0.2s ease;
+        }
+
+
+        .order-button:hover {
+            background: #D07859;
+
+            border-color: #D07859;
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           ÉQUIPE
+        ===================================================== */
+
+        .team {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            max-width: 900px;
+        }
+
+
+        .person {
+            border-top: 1px solid rgba(241,236,226,0.18);
+
+            padding-top: 25px;
+        }
+
+
+        .person h3 {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 30px;
+
+            font-weight: 400;
+
+            margin-bottom: 12px;
+
+            color: #F1ECE2;
+        }
+
+
+        .person p {
+            color: #AEB9AD;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 35px 8%;
+
+            border-top: 1px solid rgba(241,236,226,0.12);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            color: #89968A;
+
+            font-size: 12px;
+        }
+
+
+        footer a {
+            color: #AEB9AD;
+
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #D07859;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            nav {
+                height: 68px;
+
+                padding: 0 5%;
+            }
+
+
+            nav ul {
+                gap: 15px;
+            }
+
+
+            nav a {
+                font-size: 12px;
+            }
+
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 125px 7% 80px;
+
+                gap: 65px;
+            }
+
+
+            .hero h1 {
+                font-size: clamp(55px, 16vw, 85px);
+
+                letter-spacing: -4px;
+            }
+
+
+            .hero-intro {
+                font-size: 17px;
+            }
+
+
+            .hero-art {
+                justify-content: center;
+            }
+
+
+            .paper {
+                width: 75%;
+                max-width: 340px;
+            }
+
+
+            section {
+                padding: 90px 7%;
+            }
+
+
+            .about {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+
+            .about-main p {
+                font-size: 20px;
+            }
+
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+
+                gap: 15px;
+            }
+
+
+            .art:nth-child(2),
+            .art:nth-child(5) {
+                margin-top: 25px;
+            }
+
+
+            .order {
+                padding: 60px 8%;
+            }
+
+
+            .team {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+
+            footer {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 30px 7%;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            nav {
+                padding: 0 4%;
+            }
+
+
+            nav ul {
+                gap: 11px;
+            }
+
+
+            nav a {
+                font-size: 11px;
+            }
+
+
+            .logo {
+                font-size: 17px;
+            }
+
+
+            .instagram-link svg {
+                width: 18px;
+                height: 18px;
+            }
+
+
+            .hero {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+
+            .art:nth-child(2),
+            .art:nth-child(5) {
+                margin-top: 0;
+            }
+
+
+            .order {
+                padding: 50px 25px;
+            }
+        }
+
+    </style>
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
     <div class="logo">
         1 Art <span>4</span> Hands
     </div>
+
 
     <ul>
 
@@ -569,11 +887,13 @@ footer {
             </a>
         </li>
 
+
         <li>
-            <a href="#projet">
+            <a href="#presentation">
                 Présentation
             </a>
         </li>
+
 
         <li>
             <a href="#commande">
@@ -581,8 +901,8 @@ footer {
             </a>
         </li>
 
-        <li>
 
+        <li>
             <a
                 href="https://www.instagram.com/1art_4hands/?hl=fr"
                 target="_blank"
@@ -611,14 +931,13 @@ footer {
                         cx="17.5"
                         cy="6.5"
                         r="1"
-                        fill="#F4EFE6"
+                        fill="#E9E3D8"
                         stroke="none">
                     </circle>
 
                 </svg>
 
             </a>
-
         </li>
 
     </ul>
@@ -626,33 +945,37 @@ footer {
 </nav>
 
 
-<!-- =========================
-     CONTENU
-========================= -->
+
+<!-- =====================================================
+     ACCUEIL
+===================================================== -->
 
 <main id="accueil">
 
 
-<!-- HERO -->
-
 <section class="hero">
+
 
     <div class="hero-text">
 
-        <div class="small-title">
-            Dessins personnalisés
+
+        <div class="eyebrow">
+            Dessins personnalisés · 1 Art 4 Hands
         </div>
 
+
         <h1>
-            1 Art<br>
-            <span>4 Hands.</span>
+            L'art<br>
+            <span>à quatre mains.</span>
         </h1>
 
-        <p>
-            Deux passionnés de dessin, une même envie :
-            transformer vos idées, vos souvenirs et vos envies
-            en créations uniques.
+
+        <p class="hero-intro">
+            Nous créons des dessins personnalisés à partir
+            de vos idées, de vos souvenirs et des histoires
+            que vous souhaitez garder sur papier.
         </p>
+
 
         <div class="buttons">
 
@@ -663,88 +986,113 @@ footer {
                 Commander un dessin
             </a>
 
+
             <a
                 href="#galerie"
                 class="button button-secondary"
             >
-                Voir nos créations
+                Voir la galerie
             </a>
 
         </div>
 
+
     </div>
 
 
-    <div class="drawing">
 
-        <div class="drawing-inner">
-            1<br>4
+    <div class="hero-art">
+
+        <div class="paper">
+
+            <div class="paper-inner">
+
+                <div class="paper-title">
+                    1 Art 4 Hands
+                </div>
+
+
+                <div class="paper-mark">
+                    1<br>4
+                </div>
+
+
+                <div class="paper-number">
+                    dessin original
+                </div>
+
+            </div>
+
         </div>
 
     </div>
+
 
 </section>
 
 
 
-<!-- PRESENTATION -->
+<!-- =====================================================
+     PRÉSENTATION
+===================================================== -->
 
-<section id="projet">
+<section id="presentation">
 
-    <div class="small-title">
-        Notre projet
+
+    <div class="section-label">
+        Le projet
     </div>
 
+
     <h2 class="section-title">
-        L'art <span>à quatre mains.</span>
+        Deux regards,<br>
+        <em>une même création.</em>
     </h2>
+
 
     <div class="about">
 
-        <div class="about-text">
+
+        <div class="about-main">
 
             <p>
-                1 Art 4 Hands est un projet créé
-                par deux jeunes passionnés de dessin.
+                1 Art 4 Hands est un projet né de notre
+                passion commune pour le dessin et la création.
             </p>
 
             <p>
-                Nous réalisons des dessins personnalisés
-                sur commande, en donnant à chaque création
-                une attention particulière.
-            </p>
-
-            <p>
-                Notre objectif : créer des œuvres qui ont
-                du sens pour ceux qui les commandent.
+                Nous réalisons des œuvres personnalisées,
+                pensées spécialement pour la personne qui
+                les commande.
             </p>
 
         </div>
 
 
-        <div class="numbers">
 
-            <div class="number">
-                <strong>01</strong>
-                Une idée
-            </div>
+        <div class="about-side">
 
-            <div class="number">
-                <strong>02</strong>
-                Un dessin
-            </div>
+            <div class="line"></div>
 
-            <div class="number">
-                <strong>03</strong>
-                Une création
-            </div>
+            <p>
+                Chaque commande commence par une discussion :
+                une idée, une photo, un souvenir ou simplement
+                une envie de créer quelque chose d'unique.
+            </p>
 
-            <div class="number">
-                <strong>04</strong>
-                Vos mains
+
+            <p>
+                Nous cherchons ensuite la meilleure manière
+                de transformer cette idée en dessin.
+            </p>
+
+
+            <div class="signature">
+                Dessiné à quatre mains.
             </div>
 
         </div>
+
 
     </div>
 
@@ -752,56 +1100,94 @@ footer {
 
 
 
-<!-- GALERIE -->
+<!-- =====================================================
+     GALERIE
+===================================================== -->
 
 <section id="galerie">
 
-    <div class="small-title">
-        Nos créations
+
+    <div class="section-label">
+        Quelques créations
     </div>
 
+
     <h2 class="section-title">
-        La galerie <span>1 Art 4 Hands.</span>
+        Ce que nous<br>
+        <em>avons dessiné.</em>
     </h2>
+
+
+    <p class="gallery-intro">
+        Retrouvez ici quelques-unes de nos créations.
+        La galerie évoluera au fil des dessins réalisés
+        et des projets qui nous seront confiés.
+    </p>
+
 
 
     <div class="gallery">
 
+
         <div class="art">
+
             <img
                 src="images/dessin1.jpg"
-                alt="Dessin réalisé par 1 Art 4 Hands">
+                alt="Dessin réalisé par 1 Art 4 Hands"
+            >
+
         </div>
 
+
         <div class="art">
+
             <img
                 src="images/dessin2.jpg"
-                alt="Dessin réalisé par 1 Art 4 Hands">
+                alt="Dessin réalisé par 1 Art 4 Hands"
+            >
+
         </div>
 
+
         <div class="art">
+
             <img
                 src="images/dessin3.jpg"
-                alt="Dessin réalisé par 1 Art 4 Hands">
+                alt="Dessin réalisé par 1 Art 4 Hands"
+            >
+
         </div>
 
+
         <div class="art">
+
             <img
                 src="images/dessin4.jpg"
-                alt="Dessin réalisé par 1 Art 4 Hands">
+                alt="Dessin réalisé par 1 Art 4 Hands"
+            >
+
         </div>
 
+
         <div class="art">
+
             <img
                 src="images/dessin5.jpg"
-                alt="Dessin réalisé par 1 Art 4 Hands">
+                alt="Dessin réalisé par 1 Art 4 Hands"
+            >
+
         </div>
 
+
         <div class="art">
+
             <img
                 src="images/dessin6.jpg"
-                alt="Dessin réalisé par 1 Art 4 Hands">
+                alt="Dessin réalisé par 1 Art 4 Hands"
+            >
+
         </div>
+
 
     </div>
 
@@ -809,56 +1195,71 @@ footer {
 
 
 
-<!-- COMMANDE -->
+<!-- =====================================================
+     COMMANDE
+===================================================== -->
 
 <section id="commande">
 
+
     <div class="order">
 
-        <div class="small-title">
+
+        <div class="section-label">
             Une idée en tête ?
         </div>
 
+
         <h2 class="section-title">
             Faisons-la<br>
-            <span>dessiner.</span>
+            <em>dessiner.</em>
         </h2>
 
-        <p>
+
+        <p class="order-text">
             Vous avez une idée de dessin personnalisé ?
-            Contactez-nous et expliquez-nous votre projet.
-            Nous vous répondrons pour discuter de votre demande.
+            Expliquez-nous votre projet, ce que vous imaginez
+            et ce que vous aimeriez obtenir. Nous pourrons
+            ensuite échanger avec vous pour donner forme
+            à votre idée.
         </p>
 
+
         <a
-            class="button"
             href="mailto:contact@1art4hands.fr"
+            class="order-button"
         >
             Nous contacter
         </a>
 
+
     </div>
 
 </section>
 
 
 
-<!-- EQUIPE -->
+<!-- =====================================================
+     QUI SOMMES-NOUS
+===================================================== -->
 
-<section>
+<section id="equipe">
 
-    <div class="small-title">
-        Qui sommes-nous ?
+
+    <div class="section-label">
+        Derrière 1 Art 4 Hands
     </div>
 
+
     <h2 class="section-title">
-        Deux personnes,<br>
-        <span>un projet.</span>
+        Un projet porté<br>
+        <em>à deux.</em>
     </h2>
 
 
     <div class="team">
 
+
         <div class="person">
 
             <h3>
@@ -868,7 +1269,7 @@ footer {
             <p>
                 Passionné de dessin et de création,
                 il participe à la réalisation des œuvres
-                et au développement du projet.
+                et au développement de 1 Art 4 Hands.
             </p>
 
         </div>
@@ -883,10 +1284,11 @@ footer {
             <p>
                 Passionné de dessin et de création,
                 il participe à la réalisation des œuvres
-                et au développement du projet.
+                et au développement de 1 Art 4 Hands.
             </p>
 
         </div>
+
 
     </div>
 
@@ -897,17 +1299,28 @@ footer {
 
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
+
 
     <div>
         © 2026 — 1 Art 4 Hands
     </div>
 
+
     <div>
-        Dessiné à quatre mains.
+        <a
+            href="https://www.instagram.com/1art_4hands/?hl=fr"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Instagram
+        </a>
     </div>
+
 
 </footer>
 
