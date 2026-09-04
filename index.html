@@ -1,954 +1,1014 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>1 Art 4 Hands — L'art à quatre mains</title>
-
-    <style>
-
-        /* =========================================================
-           1 ART 4 HANDS — SITE COMPLET
-           ========================================================= */
-
-        :root {
-            --background: #E8E0D2;
-            --background-secondary: #DDD2C0;
-            --surface: #F1EADF;
-            --text: #302C28;
-            --text-soft: #655F58;
-            --accent: #A65D4B;
-            --accent-dark: #814638;
-            --border: rgba(48,44,40,0.14);
-            --nav: rgba(232,224,210,0.94);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Georgia, "Times New Roman", serif;
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.6;
-            transition:
-                background 0.4s ease,
-                color 0.4s ease;
-        }
-
-        /* =========================
-           NAVIGATION
-           ========================= */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 22px 7%;
-
-            background: var(--nav);
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid var(--border);
-
-            transition:
-                background 0.4s ease,
-                border-color 0.4s ease;
-        }
-
-        .logo {
-            font-size: 20px;
-            letter-spacing: 3px;
-            font-weight: normal;
-            white-space: nowrap;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            transition: color 0.25s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Instagram */
-
-        .instagram {
-            width: 24px;
-            height: 24px;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            font-family: Arial, sans-serif;
-            font-size: 21px !important;
+<title>1 Art 4 Hands</title>
 
-            color: var(--text) !important;
+<style>
 
-            transition:
-                color 0.25s ease,
-                transform 0.25s ease;
-        }
+/* =========================================================
+   1 ART 4 HANDS
+   SITE COMPLET
+   ========================================================= */
 
-        .instagram:hover {
-            color: var(--accent) !important;
-            transform: translateY(-2px);
-        }
+:root {
+    --background: #D8C8B8;
+    --background-secondary: #CBB7A5;
+    --surface: #D3C1B0;
+    --text: #332D29;
+    --text-soft: #655B54;
+    --accent: #A45F4E;
+    --border: rgba(51,45,41,0.15);
+    --nav: rgba(216,200,184,0.94);
+}
 
-        /* =========================
-           HERO
-           ========================= */
 
-        .hero {
-            min-height: 100vh;
+/* =========================================================
+   RESET
+   ========================================================= */
 
-            padding: 180px 10% 100px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+html {
+    scroll-behavior: smooth;
+}
 
-            max-width: 1250px;
-            margin: auto;
-        }
+body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    font-family: Georgia, "Times New Roman", serif;
 
-        .small-title {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-soft);
+    transition:
+        background 0.4s ease,
+        color 0.4s ease;
+}
 
-            transition: color 0.4s ease;
-        }
 
-        h1 {
-            font-size: clamp(58px, 9vw, 115px);
-            font-weight: normal;
-            line-height: 0.92;
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
-            margin: 28px 0;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-            letter-spacing: -4px;
-        }
+    width: 100%;
 
-        h1 span {
-            color: var(--accent);
-            transition: color 0.4s ease;
-        }
+    z-index: 1000;
 
-        .hero-description {
-            max-width: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-            font-size: 18px;
-            color: var(--text-soft);
+    padding: 22px 7%;
 
-            margin-bottom: 10px;
+    background: var(--nav);
 
-            transition: color 0.4s ease;
-        }
+    backdrop-filter: blur(12px);
 
-        /* =========================
-           BOUTONS
-           ========================= */
+    border-bottom: 1px solid var(--border);
 
-        .button-primary {
-            display: inline-block;
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
 
-            width: fit-content;
+.logo {
+    font-size: 20px;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
 
-            margin-top: 28px;
-            padding: 14px 28px;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-            background: var(--text);
-            color: var(--background);
+.nav-links a {
+    color: var(--text);
 
-            text-decoration: none;
+    text-decoration: none;
 
-            font-family: Arial, sans-serif;
-            font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 
-            transition:
-                background 0.25s ease,
-                color 0.25s ease,
-                transform 0.25s ease;
-        }
+    transition: color 0.25s ease;
+}
 
-        .button-primary:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-2px);
-        }
+.nav-links a:hover {
+    color: var(--accent);
+}
 
-        /* =========================
-           SECTIONS
-           ========================= */
 
-        section {
-            padding: 120px 10%;
-        }
+/* =========================================================
+   INSTAGRAM
+   ========================================================= */
 
-        .about {
-            max-width: 1100px;
-            margin: auto;
-        }
+.instagram {
+    width: 24px;
+    height: 24px;
 
-        .section-title {
-            font-size: clamp(42px, 6vw, 70px);
-            font-weight: normal;
-            line-height: 1;
-            margin: 25px 0 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-            letter-spacing: -2px;
-        }
+    color: var(--text) !important;
 
-        .section-title span {
-            color: var(--accent);
-            transition: color 0.4s ease;
-        }
+    font-size: 21px !important;
 
-        .about-text {
-            max-width: 720px;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
 
-            font-size: 18px;
-            color: var(--text-soft);
+.instagram:hover {
+    color: var(--accent) !important;
+    transform: translateY(-2px);
+}
 
-            transition: color 0.4s ease;
-        }
 
-        /* =========================
-           ARTISTES
-           ========================= */
+/* =========================================================
+   ACCUEIL
+   ========================================================= */
 
-        .people {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+.hero {
+    min-height: 100vh;
 
-            margin-top: 55px;
-        }
+    padding: 180px 10% 100px;
 
-        .person {
-            padding: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-            background: var(--surface);
+    max-width: 1250px;
 
-            border: 1px solid var(--border);
+    margin: auto;
+}
 
-            transition:
-                background 0.4s ease,
-                border-color 0.4s ease,
-                transform 0.3s ease;
-        }
+.small-title {
+    font-family: Arial, sans-serif;
 
-        .person:hover {
-            transform: translateY(-4px);
-        }
+    font-size: 12px;
 
-        .person-number {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 2px;
-            color: var(--accent);
+    text-transform: uppercase;
 
-            margin-bottom: 25px;
-        }
+    letter-spacing: 3px;
 
-        .person h3 {
-            font-size: 28px;
-            font-weight: normal;
-            margin-bottom: 15px;
-        }
+    color: var(--text-soft);
+}
 
-        .person p {
-            color: var(--text-soft);
-            font-size: 16px;
-        }
+h1 {
+    font-size: clamp(58px, 9vw, 115px);
 
-        /* =========================
-           PETITE GALERIE
-           ========================= */
+    font-weight: normal;
 
-        .gallery {
-            max-width: 1100px;
-            margin: 0 auto;
+    line-height: 0.92;
 
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 24px;
-        }
+    letter-spacing: -4px;
 
-        .art-card {
-            min-height: 300px;
+    margin: 28px 0;
+}
 
-            background: var(--surface);
+h1 span,
+.section-title span {
+    color: var(--accent);
+}
 
-            border: 1px solid var(--border);
+.hero-description {
+    max-width: 620px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    font-size: 18px;
 
-            padding: 40px;
+    color: var(--text-soft);
+}
 
-            transition:
-                background 0.4s ease,
-                border-color 0.4s ease;
-        }
 
-        .art-card:first-child {
-            min-height: 500px;
-        }
+/* =========================================================
+   BOUTONS
+   ========================================================= */
 
-        .art-placeholder {
-            width: 100%;
-            height: 100%;
+.button-primary {
+    display: inline-block;
 
-            min-height: 220px;
+    width: fit-content;
 
-            border: 1px dashed var(--accent);
+    margin-top: 28px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    padding: 14px 28px;
 
-            color: var(--accent);
+    background: var(--text);
 
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+    color: var(--background);
 
-            opacity: 0.8;
-        }
+    text-decoration: none;
 
-        /* =========================
-           COMMANDE
-           ========================= */
+    font-family: Arial, sans-serif;
 
-        #commande {
-            padding-top: 100px;
-            padding-bottom: 150px;
-        }
+    font-size: 14px;
 
-        .order {
-            max-width: 1050px;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
 
-            margin: 0 auto;
+.button-primary:hover {
+    background: var(--accent);
 
-            padding: 75px;
+    color: white;
 
-            background: var(--background-secondary);
+    transform: translateY(-2px);
+}
 
-            border: 1px solid var(--border);
 
-            transition:
-                background 0.4s ease,
-                border-color 0.4s ease;
-        }
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
-        .order .section-title {
-            margin-bottom: 30px;
-        }
+section {
+    padding: 120px 10%;
+}
 
-        .order p {
-            max-width: 650px;
+.about {
+    max-width: 1100px;
 
-            color: var(--text-soft);
+    margin: auto;
+}
 
-            font-size: 17px;
-        }
+.section-title {
+    font-size: clamp(42px, 6vw, 70px);
 
-        .order .button-primary {
-            margin-top: 30px;
-        }
+    font-weight: normal;
 
-        /* =========================
-           FOOTER
-           ========================= */
+    line-height: 1;
 
-        footer {
-            padding: 45px 10%;
+    margin: 25px 0 55px;
 
-            text-align: center;
+    letter-spacing: -2px;
+}
 
-            border-top: 1px solid var(--border);
+.about-text {
+    max-width: 720px;
 
-            font-family: Arial, sans-serif;
-            font-size: 12px;
+    font-size: 18px;
 
-            color: var(--text-soft);
+    color: var(--text-soft);
+}
 
-            transition:
-                color 0.4s ease,
-                border-color 0.4s ease;
-        }
 
-        /* =========================
-           SÉLECTEUR DE COULEURS
-           ========================= */
+/* =========================================================
+   ARTISTES
+   ========================================================= */
 
-        .palette-selector {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
+.people {
+    display: grid;
 
-            z-index: 2000;
+    grid-template-columns: repeat(2, 1fr);
 
-            display: flex;
-            gap: 7px;
+    gap: 24px;
 
-            padding: 9px;
+    margin-top: 55px;
+}
 
-            background: var(--surface);
+.person {
+    padding: 38px;
 
-            border: 1px solid var(--border);
+    background: var(--surface);
 
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
 
-            border-radius: 30px;
-        }
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.3s ease;
+}
 
-        .palette {
-            width: 19px;
-            height: 19px;
+.person:hover {
+    transform: translateY(-4px);
+}
 
-            border-radius: 50%;
+.person-number {
+    font-family: Arial, sans-serif;
 
-            border: 2px solid rgba(255,255,255,0.7);
+    font-size: 12px;
 
-            cursor: pointer;
+    letter-spacing: 2px;
 
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
+    color: var(--accent);
 
-        .palette:hover {
-            transform: scale(1.25);
-        }
+    margin-bottom: 25px;
+}
 
-        .palette.active {
-            box-shadow: 0 0 0 2px var(--text);
-        }
+.person h3 {
+    font-size: 28px;
 
-        /* =========================
-           RESPONSIVE
-           ========================= */
+    font-weight: normal;
 
-        @media (max-width: 750px) {
+    margin-bottom: 15px;
+}
 
-            nav {
-                padding: 18px 5%;
-            }
+.person p {
+    color: var(--text-soft);
+}
 
-            .logo {
-                font-size: 16px;
-                letter-spacing: 2px;
-            }
 
-            .nav-links {
-                gap: 15px;
-            }
+/* =========================================================
+   GALERIE
+   ========================================================= */
 
-            .nav-links a {
-                font-size: 12px;
-            }
+.gallery {
+    max-width: 1100px;
 
-            .hero {
-                padding: 150px 7% 80px;
-            }
+    margin: 0 auto;
 
-            h1 {
-                font-size: 62px;
-                letter-spacing: -2px;
-            }
+    display: grid;
 
-            section {
-                padding: 90px 7%;
-            }
+    grid-template-columns: 1.2fr 0.8fr;
 
-            .people {
-                grid-template-columns: 1fr;
-            }
+    gap: 24px;
+}
 
-            .gallery {
-                grid-template-columns: 1fr;
-            }
+.art-card {
+    min-height: 300px;
 
-            .art-card:first-child {
-                min-height: 300px;
-            }
+    padding: 40px;
 
-            .order {
-                padding: 45px 28px;
-            }
+    background: var(--surface);
 
-            .palette-selector {
-                right: 12px;
-                bottom: 12px;
-            }
-        }
+    border: 1px solid var(--border);
 
-    </style>
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.art-card:first-child {
+    min-height: 500px;
+}
+
+.art-placeholder {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 220px;
+
+    border: 1px dashed var(--accent);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--accent);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   COMMANDE
+   ========================================================= */
+
+#commande {
+    padding-top: 100px;
+
+    padding-bottom: 150px;
+}
+
+.order {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 75px;
+
+    background: var(--background-secondary);
+
+    border: 1px solid var(--border);
+
+    transition:
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.order p {
+    max-width: 650px;
+
+    color: var(--text-soft);
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 45px 10%;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-soft);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SELECTEUR DES 6 COULEURS
+   ========================================================= */
+
+.palette-selector {
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 2000;
+
+    display: flex;
+
+    gap: 7px;
+
+    padding: 9px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+    border-radius: 30px;
+}
+
+.palette {
+    width: 19px;
+
+    height: 19px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255,255,255,0.7);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.palette:hover {
+    transform: scale(1.25);
+}
+
+.palette.active {
+    box-shadow: 0 0 0 2px var(--text);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 150px 7% 80px;
+    }
+
+    h1 {
+        font-size: 62px;
+
+        letter-spacing: -2px;
+    }
+
+    section {
+        padding: 90px 7%;
+    }
+
+    .people {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .art-card:first-child {
+        min-height: 300px;
+    }
+
+    .order {
+        padding: 45px 28px;
+    }
+
+    .palette-selector {
+        right: 12px;
+
+        bottom: 12px;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-    <!-- =========================================================
-         NAVIGATION
-         ========================================================= -->
 
-    <nav>
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
 
-        <div class="logo">
-            1 ART 4 HANDS
-        </div>
+<nav>
 
-        <div class="nav-links">
+    <div class="logo">
+        1 ART 4 HANDS
+    </div>
 
-            <a href="#accueil">
-                Accueil
-            </a>
+    <div class="nav-links">
 
-            <a href="#presentation">
-                Présentation
-            </a>
-
-            <a href="#commande">
-                Commande
-            </a>
-
-            <!-- Instagram -->
-            <a
-                class="instagram"
-                href="https://www.instagram.com/1art_4hands/?hl=fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram 1 Art 4 Hands"
-            >
-                ◎
-            </a>
-
-        </div>
-
-    </nav>
-
-
-    <!-- =========================================================
-         ACCUEIL
-         ========================================================= -->
-
-    <header class="hero" id="accueil">
-
-        <div class="small-title">
-            Dessin · Création · Collaboration
-        </div>
-
-        <h1>
-            L'art<br>
-            à <span>quatre mains.</span>
-        </h1>
-
-        <p class="hero-description">
-            Deux artistes, une idée et un dessin créé spécialement pour vous.
-            Découvrez notre univers et donnez vie à vos idées.
-        </p>
-
-        <a
-            href="#commande"
-            class="button-primary"
-        >
-            Commander un dessin
+        <a href="#accueil">
+            Accueil
         </a>
 
-    </header>
+        <a href="#presentation">
+            Présentation
+        </a>
+
+        <a href="#commande">
+            Commande
+        </a>
+
+        <a
+            class="instagram"
+            href="https://www.instagram.com/1art_4hands/?hl=fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram 1 Art 4 Hands"
+        >
+            ◎
+        </a>
+
+    </div>
+
+</nav>
 
 
-    <!-- =========================================================
-         PRÉSENTATION
-         ========================================================= -->
+<!-- =========================================================
+     ACCUEIL
+     ========================================================= -->
 
-    <section id="presentation">
+<header class="hero" id="accueil">
 
-        <div class="about">
+    <div class="small-title">
+        Dessin · Création · Collaboration
+    </div>
 
-            <div class="small-title">
-                Notre histoire
+    <h1>
+        L'art<br>
+        à <span>quatre mains.</span>
+    </h1>
+
+    <p class="hero-description">
+        Deux artistes, une idée et un dessin créé spécialement pour vous.
+        Découvrez notre univers et donnez vie à vos idées.
+    </p>
+
+    <a
+        href="#commande"
+        class="button-primary"
+    >
+        Commander un dessin
+    </a>
+
+</header>
+
+
+<!-- =========================================================
+     PRESENTATION
+     ========================================================= -->
+
+<section id="presentation">
+
+    <div class="about">
+
+        <div class="small-title">
+            Notre histoire
+        </div>
+
+        <h2 class="section-title">
+            Deux regards.<br>
+            <span>Une création.</span>
+        </h2>
+
+        <p class="about-text">
+            Nous sommes deux jeunes artistes réunis autour d'une même
+            envie : transformer vos idées, vos souvenirs et vos
+            inspirations en dessins uniques réalisés à quatre mains.
+        </p>
+
+
+        <div class="people">
+
+            <div class="person">
+
+                <div class="person-number">
+                    ARTISTE 01
+                </div>
+
+                <h3>
+                    Une première vision.
+                </h3>
+
+                <p>
+                    Un univers graphique personnel, une attention portée
+                    aux détails et une passion pour le dessin.
+                </p>
+
             </div>
 
-            <h2 class="section-title">
-                Deux regards.<br>
-                <span>Une création.</span>
-            </h2>
 
-            <p class="about-text">
-                Nous sommes deux jeunes artistes réunis autour d'une même
-                envie : transformer vos idées, vos souvenirs et vos
-                inspirations en dessins uniques réalisés à quatre mains.
-            </p>
+            <div class="person">
 
-
-            <div class="people">
-
-                <div class="person">
-
-                    <div class="person-number">
-                        ARTISTE 01
-                    </div>
-
-                    <h3>
-                        Une première vision.
-                    </h3>
-
-                    <p>
-                        Un univers graphique personnel, une attention portée
-                        aux détails et une passion pour le dessin.
-                    </p>
-
+                <div class="person-number">
+                    ARTISTE 02
                 </div>
 
+                <h3>
+                    Un autre regard.
+                </h3>
 
-                <div class="person">
-
-                    <div class="person-number">
-                        ARTISTE 02
-                    </div>
-
-                    <h3>
-                        Un autre regard.
-                    </h3>
-
-                    <p>
-                        Une sensibilité différente qui vient compléter chaque
-                        création et donner naissance à un dessin singulier.
-                    </p>
-
-                </div>
+                <p>
+                    Une sensibilité différente qui vient compléter chaque
+                    création et donner naissance à un dessin singulier.
+                </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================================================
-         GALERIE
-         ========================================================= -->
+<!-- =========================================================
+     GALERIE
+     ========================================================= -->
 
-    <section>
+<section>
 
-        <div class="about">
+    <div class="about">
 
-            <div class="small-title">
-                Notre univers
-            </div>
-
-            <h2 class="section-title">
-                Des idées<br>
-                <span>qui prennent forme.</span>
-            </h2>
-
+        <div class="small-title">
+            Notre univers
         </div>
 
-
-        <div class="gallery">
-
-            <div class="art-card">
-
-                <div class="art-placeholder">
-                    Votre dessin ici
-                </div>
-
-            </div>
-
-
-            <div class="art-card">
-
-                <div class="art-placeholder">
-                    Création
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-         COMMANDE
-         ========================================================= -->
-
-    <section id="commande">
-
-        <div class="order">
-
-            <div class="small-title">
-                Votre projet
-            </div>
-
-            <h2 class="section-title">
-                Commandez votre <span>dessin.</span>
-            </h2>
-
-            <p>
-                Vous avez une idée, une photo, un souvenir ou simplement
-                une envie ? Contactez-nous afin de discuter de votre projet
-                et de créer ensemble une illustration personnalisée.
-            </p>
-
-            <a
-                href="https://www.instagram.com/1art_4hands/?hl=fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button-primary"
-            >
-                Nous contacter
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
-
-    <footer>
-
-        © 2026 — 1 Art 4 Hands
-
-    </footer>
-
-
-    <!-- =========================================================
-         6 PALETTES
-         ========================================================= -->
-
-    <div class="palette-selector">
-
-        <!-- 1 — Sable / Terracotta -->
-        <button
-            class="palette active"
-            style="background:#A65D4B"
-            onclick="changePalette('terracotta')"
-            aria-label="Palette terracotta"
-        ></button>
-
-        <!-- 2 — Bleu pétrole / Beige -->
-        <button
-            class="palette"
-            style="background:#42636A"
-            onclick="changePalette('petrole')"
-            aria-label="Palette bleu pétrole"
-        ></button>
-
-        <!-- 3 — Prune / Rose -->
-        <button
-            class="palette"
-            style="background:#9B6874"
-            onclick="changePalette('prune')"
-            aria-label="Palette prune"
-        ></button>
-
-        <!-- 4 — Bleu nuit / Doré -->
-        <button
-            class="palette"
-            style="background:#B39458"
-            onclick="changePalette('nuit')"
-            aria-label="Palette bleu nuit"
-        ></button>
-
-        <!-- 5 — Olive / Rose poudré -->
-        <button
-            class="palette"
-            style="background:#7D8262"
-            onclick="changePalette('olive')"
-            aria-label="Palette olive"
-        ></button>
-
-        <!-- 6 — Chocolat / Cuivre -->
-        <button
-            class="palette"
-            style="background:#9A694F"
-            onclick="changePalette('chocolat')"
-            aria-label="Palette chocolat"
-        ></button>
+        <h2 class="section-title">
+            Des idées<br>
+            <span>qui prennent forme.</span>
+        </h2>
 
     </div>
 
 
-    <!-- =========================================================
-         JAVASCRIPT
-         ========================================================= -->
+    <div class="gallery">
 
-    <script>
+        <div class="art-card">
 
-        function changePalette(palette) {
+            <div class="art-placeholder">
+                Votre dessin ici
+            </div>
 
-            const root = document.documentElement;
-
-            const palettes = {
-
-                /* 1 — Sable / Terracotta */
-
-                terracotta: {
-                    background: "#E8E0D2",
-                    secondary: "#DDD2C0",
-                    surface: "#F1EADF",
-                    text: "#302C28",
-                    soft: "#655F58",
-                    accent: "#A65D4B",
-                    accentDark: "#814638",
-                    border: "rgba(48,44,40,0.14)",
-                    nav: "rgba(232,224,210,0.94)"
-                },
+        </div>
 
 
-                /* 2 — Bleu pétrole / Beige */
+        <div class="art-card">
 
-                petrole: {
-                    background: "#D9DFDD",
-                    secondary: "#C7D1CF",
-                    surface: "#E8ECEA",
-                    text: "#26383D",
-                    soft: "#536468",
-                    accent: "#B36F55",
-                    accentDark: "#8F5542",
-                    border: "rgba(38,56,61,0.15)",
-                    nav: "rgba(217,223,221,0.94)"
-                },
+            <div class="art-placeholder">
+                Création
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-                /* 3 — Prune / Rose poudré */
+<!-- =========================================================
+     COMMANDE
+     ========================================================= -->
 
-                prune: {
-                    background: "#DDD1D4",
-                    secondary: "#CCBFC3",
-                    surface: "#EAE2E3",
-                    text: "#382E33",
-                    soft: "#665A60",
-                    accent: "#9B6874",
-                    accentDark: "#794E59",
-                    border: "rgba(56,46,51,0.14)",
-                    nav: "rgba(221,209,212,0.94)"
-                },
+<section id="commande">
 
+    <div class="order">
 
-                /* 4 — Bleu nuit / Doré */
+        <div class="small-title">
+            Votre projet
+        </div>
 
-                nuit: {
-                    background: "#27343E",
-                    secondary: "#34434D",
-                    surface: "#3A4A54",
-                    text: "#F0E9DC",
-                    soft: "#C2C5C3",
-                    accent: "#B39458",
-                    accentDark: "#8D703E",
-                    border: "rgba(240,233,220,0.15)",
-                    nav: "rgba(39,52,62,0.94)"
-                },
+        <h2 class="section-title">
+            Commandez votre <span>dessin.</span>
+        </h2>
 
+        <p>
+            Vous avez une idée, une photo, un souvenir ou simplement
+            une envie ? Contactez-nous afin de discuter de votre projet
+            et de créer ensemble une illustration personnalisée.
+        </p>
 
-                /* 5 — Olive / Rose */
+        <a
+            href="https://www.instagram.com/1art_4hands/?hl=fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-primary"
+        >
+            Nous contacter
+        </a>
 
-                olive: {
-                    background: "#D9D9C9",
-                    secondary: "#C7C8B5",
-                    surface: "#E5E5D9",
-                    text: "#34372D",
-                    soft: "#64675A",
-                    accent: "#9A7B78",
-                    accentDark: "#795D5A",
-                    border: "rgba(52,55,45,0.14)",
-                    nav: "rgba(217,217,201,0.94)"
-                },
+    </div>
+
+</section>
 
 
-                /* 6 — Chocolat / Cuivre */
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
-                chocolat: {
-                    background: "#D8C9BC",
-                    secondary: "#C6B4A5",
-                    surface: "#E5D9CE",
-                    text: "#3B3029",
-                    soft: "#685B53",
-                    accent: "#9A694F",
-                    accentDark: "#754C38",
-                    border: "rgba(59,48,41,0.15)",
-                    nav: "rgba(216,201,188,0.94)"
-                }
+<footer>
 
-            };
+    © 2026 — 1 Art 4 Hands
+
+</footer>
 
 
-            const selected = palettes[palette];
+<!-- =========================================================
+     6 PALETTES
+     ========================================================= -->
 
-            root.style.setProperty("--background", selected.background);
-            root.style.setProperty("--background-secondary", selected.secondary);
-            root.style.setProperty("--surface", selected.surface);
-            root.style.setProperty("--text", selected.text);
-            root.style.setProperty("--text-soft", selected.soft);
-            root.style.setProperty("--accent", selected.accent);
-            root.style.setProperty("--accent-dark", selected.accentDark);
-            root.style.setProperty("--border", selected.border);
-            root.style.setProperty("--nav", selected.nav);
+<div class="palette-selector">
+
+    <button
+        class="palette active"
+        style="background:#A45F4E"
+        onclick="changePalette('terracotta')"
+        aria-label="Sable et terracotta"
+    ></button>
+
+    <button
+        class="palette"
+        style="background:#47727A"
+        onclick="changePalette('petrole')"
+        aria-label="Bleu pétrole"
+    ></button>
+
+    <button
+        class="palette"
+        style="background:#A46D7A"
+        onclick="changePalette('prune')"
+        aria-label="Prune"
+    ></button>
+
+    <button
+        class="palette"
+        style="background:#B79A61"
+        onclick="changePalette('nuit')"
+        aria-label="Bleu nuit et doré"
+    ></button>
+
+    <button
+        class="palette"
+        style="background:#7C8463"
+        onclick="changePalette('olive')"
+        aria-label="Olive"
+    ></button>
+
+    <button
+        class="palette"
+        style="background:#986A50"
+        onclick="changePalette('taupe')"
+        aria-label="Taupe et brun"
+    ></button>
+
+</div>
 
 
-            document.querySelectorAll(".palette").forEach(button => {
-                button.classList.remove("active");
-            });
+<!-- =========================================================
+     JAVASCRIPT — CHANGEMENT DES COULEURS
+     ========================================================= -->
+
+<script>
+
+function changePalette(name) {
+
+    const root = document.documentElement;
+
+    const palettes = {
+
+        /* 1 — SABLE / TERRACOTTA */
+
+        terracotta: {
+            background: "#D8C8B8",
+            secondary: "#CBB7A5",
+            surface: "#D3C1B0",
+            text: "#332D29",
+            soft: "#655B54",
+            accent: "#A45F4E",
+            border: "rgba(51,45,41,0.15)",
+            nav: "rgba(216,200,184,0.94)"
+        },
 
 
-            const buttons = document.querySelectorAll(".palette");
+        /* 2 — BLEU PETROLE */
 
-            const names = [
-                "terracotta",
-                "petrole",
-                "prune",
-                "nuit",
-                "olive",
-                "chocolat"
-            ];
+        petrole: {
+            background: "#344A50",
+            secondary: "#405A60",
+            surface: "#3C555B",
+            text: "#EEE9DF",
+            soft: "#C5CCCA",
+            accent: "#C28A68",
+            border: "rgba(238,233,223,0.15)",
+            nav: "rgba(52,74,80,0.94)"
+        },
 
-            const index = names.indexOf(palette);
 
-            if (buttons[index]) {
-                buttons[index].classList.add("active");
-            }
+        /* 3 — PRUNE */
 
+        prune: {
+            background: "#493A42",
+            secondary: "#57454E",
+            surface: "#513F48",
+            text: "#F0E8E4",
+            soft: "#CEC1C2",
+            accent: "#C08A91",
+            border: "rgba(240,232,228,0.15)",
+            nav: "rgba(73,58,66,0.94)"
+        },
+
+
+        /* 4 — BLEU NUIT / DORE */
+
+        nuit: {
+            background: "#202B34",
+            secondary: "#2A3842",
+            surface: "#31404A",
+            text: "#EFE9DD",
+            soft: "#BFC4C4",
+            accent: "#B79A61",
+            border: "rgba(239,233,221,0.14)",
+            nav: "rgba(32,43,52,0.94)"
+        },
+
+
+        /* 5 — OLIVE */
+
+        olive: {
+            background: "#4A5141",
+            secondary: "#59604D",
+            surface: "#525947",
+            text: "#EEEADD",
+            soft: "#C6C8BA",
+            accent: "#B29A72",
+            border: "rgba(238,234,221,0.15)",
+            nav: "rgba(74,81,65,0.94)"
+        },
+
+
+        /* 6 — TAUPE / BRUN */
+
+        taupe: {
+            background: "#4A403A",
+            secondary: "#594D45",
+            surface: "#51463F",
+            text: "#F0E8DE",
+            soft: "#C8BDB4",
+            accent: "#C18A65",
+            border: "rgba(240,232,222,0.15)",
+            nav: "rgba(74,64,58,0.94)"
         }
 
-    </script>
+    };
+
+
+    const selected = palettes[name];
+
+
+    root.style.setProperty(
+        "--background",
+        selected.background
+    );
+
+    root.style.setProperty(
+        "--background-secondary",
+        selected.secondary
+    );
+
+    root.style.setProperty(
+        "--surface",
+        selected.surface
+    );
+
+    root.style.setProperty(
+        "--text",
+        selected.text
+    );
+
+    root.style.setProperty(
+        "--text-soft",
+        selected.soft
+    );
+
+    root.style.setProperty(
+        "--accent",
+        selected.accent
+    );
+
+    root.style.setProperty(
+        "--border",
+        selected.border
+    );
+
+    root.style.setProperty(
+        "--nav",
+        selected.nav
+    );
+
+
+    /* Bouton actif */
+
+    document
+        .querySelectorAll(".palette")
+        .forEach(button => {
+            button.classList.remove("active");
+        });
+
+
+    const names = [
+        "terracotta",
+        "petrole",
+        "prune",
+        "nuit",
+        "olive",
+        "taupe"
+    ];
+
+
+    const index = names.indexOf(name);
+
+    const buttons = document.querySelectorAll(".palette");
+
+    if (buttons[index]) {
+        buttons[index].classList.add("active");
+    }
+
+}
+
+</script>
+
 
 </body>
 </html>
