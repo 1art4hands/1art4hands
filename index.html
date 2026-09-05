@@ -32,12 +32,12 @@ padding:20px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(23,63,53,.62);
-backdrop-filter:blur(22px) saturate(140%);
--webkit-backdrop-filter:blur(22px) saturate(140%);
-border-bottom:1px solid rgba(243,223,192,.18);
-box-shadow:0 8px 30px rgba(0,0,0,.08);
-z-index:1000
+background:rgba(23,63,53,.84);
+backdrop-filter:blur(18px) saturate(130%);
+-webkit-backdrop-filter:blur(18px) saturate(130%);
+border-bottom:1px solid rgba(243,223,192,.14);
+z-index:1000;
+transition:background .3s ease,box-shadow .3s ease
 }
 
 .logo{
@@ -147,7 +147,7 @@ transition:.25s ease
 }
 
 .button-primary{
-background:rgba(243,223,192,.90);
+background:#F3DFC0;
 color:#173F35;
 box-shadow:
 0 8px 25px rgba(0,0,0,.12),
@@ -155,7 +155,7 @@ inset 0 1px 1px rgba(255,255,255,.65)
 }
 
 .button-primary:hover{
-background:rgba(229,184,63,.95);
+background:#E5B83F;
 color:#173F35;
 transform:translateY(-3px)
 }
@@ -173,6 +173,10 @@ box-shadow:inset 0 1px 1px rgba(255,255,255,.12)
 background:rgba(243,223,192,.13)
 }
 
+/* =========================
+   CADRE 1 / 4
+   ========================= */
+
 .drawing{
 width:360px;
 height:460px;
@@ -186,7 +190,20 @@ align-items:center;
 transform:rotate(3deg);
 box-shadow:
 20px 25px 60px rgba(0,0,0,.30),
-inset 0 1px 1px rgba(255,255,255,.65)
+inset 0 1px 1px rgba(255,255,255,.65);
+
+transition:
+transform .45s cubic-bezier(.2,.8,.2,1),
+box-shadow .45s ease,
+background .45s ease
+}
+
+.drawing:hover{
+transform:rotate(3deg) scale(1.045);
+background:rgba(243,223,192,.80);
+box-shadow:
+25px 30px 70px rgba(0,0,0,.38),
+inset 0 1px 1px rgba(255,255,255,.80)
 }
 
 .drawing-inner{
@@ -201,7 +218,12 @@ font-weight:900;
 letter-spacing:-10px;
 color:#B9423C;
 background:rgba(255,255,255,.06);
-box-shadow:inset 0 1px 2px rgba(255,255,255,.35)
+box-shadow:inset 0 1px 2px rgba(255,255,255,.35);
+transition:transform .45s ease
+}
+
+.drawing:hover .drawing-inner{
+transform:scale(1.025)
 }
 
 section{
@@ -242,6 +264,10 @@ grid-template-columns:1fr 1fr;
 gap:15px
 }
 
+/* =========================
+   BLOCS NOTRE PROJET
+   ========================= */
+
 .number{
 padding:35px;
 background:rgba(243,223,192,.08);
@@ -251,15 +277,39 @@ backdrop-filter:blur(18px) saturate(120%);
 -webkit-backdrop-filter:blur(18px) saturate(120%);
 box-shadow:
 0 12px 35px rgba(0,0,0,.08),
-inset 0 1px 1px rgba(255,255,255,.16)
+inset 0 1px 1px rgba(255,255,255,.16);
+
+transition:
+transform .35s cubic-bezier(.2,.8,.2,1),
+box-shadow .35s ease,
+background .35s ease,
+border-color .35s ease
+}
+
+.number:hover{
+transform:translateY(-7px) scale(1.035);
+background:rgba(243,223,192,.14);
+border-color:rgba(243,223,192,.32);
+box-shadow:
+0 22px 45px rgba(0,0,0,.18),
+inset 0 1px 2px rgba(255,255,255,.24)
 }
 
 .number strong{
 display:block;
 font-size:40px;
 margin-bottom:5px;
-color:#4F8A54
+color:#4F8A54;
+transition:transform .35s ease
 }
+
+.number:hover strong{
+transform:translateX(4px)
+}
+
+/* =========================
+   GALERIE
+   ========================= */
 
 .gallery{
 display:grid;
@@ -272,19 +322,33 @@ aspect-ratio:1/1;
 background:#D96B32;
 overflow:hidden;
 border-radius:8px;
-box-shadow:0 15px 35px rgba(0,0,0,.22)
+box-shadow:0 15px 35px rgba(0,0,0,.22);
+
+transition:
+transform .4s cubic-bezier(.2,.8,.2,1),
+box-shadow .4s ease
+}
+
+.art:hover{
+transform:translateY(-8px) scale(1.035);
+box-shadow:
+0 25px 50px rgba(0,0,0,.32)
 }
 
 .art img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.4s ease
+transition:transform .5s cubic-bezier(.2,.8,.2,1)
 }
 
 .art:hover img{
-transform:scale(1.05)
+transform:scale(1.06)
 }
+
+/* =========================
+   RECTANGLE COMMANDE
+   ========================= */
 
 .order{
 background:rgba(96,69,54,.62);
@@ -296,7 +360,22 @@ backdrop-filter:blur(22px) saturate(130%);
 -webkit-backdrop-filter:blur(22px) saturate(130%);
 box-shadow:
 0 20px 50px rgba(0,0,0,.22),
-inset 0 1px 1px rgba(255,255,255,.18)
+inset 0 1px 1px rgba(255,255,255,.18);
+
+transition:
+transform .45s cubic-bezier(.2,.8,.2,1),
+box-shadow .45s ease,
+background .45s ease,
+border-color .45s ease
+}
+
+.order:hover{
+transform:translateY(-9px) scale(1.018);
+background:rgba(96,69,54,.72);
+border-color:rgba(243,223,192,.34);
+box-shadow:
+0 30px 65px rgba(0,0,0,.30),
+inset 0 1px 2px rgba(255,255,255,.24)
 }
 
 .order .small-title{
@@ -315,17 +394,20 @@ margin-bottom:30px
 }
 
 .order .button{
-background:rgba(243,223,192,.90);
+background:#F3DFC0;
 color:#604536;
-box-shadow:
-0 8px 25px rgba(0,0,0,.12),
-inset 0 1px 1px rgba(255,255,255,.65)
+transition:.3s ease
 }
 
 .order .button:hover{
 background:#E5B83F;
-color:#173F35
+color:#173F35;
+transform:translateY(-3px)
 }
+
+/* =========================
+   DEUX PERSONNES
+   ========================= */
 
 .team{
 display:grid;
@@ -342,13 +424,33 @@ backdrop-filter:blur(18px) saturate(120%);
 -webkit-backdrop-filter:blur(18px) saturate(120%);
 box-shadow:
 0 12px 35px rgba(0,0,0,.08),
-inset 0 1px 1px rgba(255,255,255,.16)
+inset 0 1px 1px rgba(255,255,255,.16);
+
+transition:
+transform .35s cubic-bezier(.2,.8,.2,1),
+box-shadow .35s ease,
+background .35s ease,
+border-color .35s ease
+}
+
+.person:hover{
+transform:translateY(-7px) scale(1.035);
+background:rgba(243,223,192,.14);
+border-color:rgba(243,223,192,.32);
+box-shadow:
+0 22px 45px rgba(0,0,0,.18),
+inset 0 1px 2px rgba(255,255,255,.24)
 }
 
 .person h3{
 font-size:28px;
 margin-bottom:10px;
-color:#3E9C9A
+color:#3E9C9A;
+transition:transform .35s ease
+}
+
+.person:hover h3{
+transform:translateX(4px)
 }
 
 .person p{
@@ -409,56 +511,23 @@ padding:40px 25px
 footer{
 flex-direction:column
 }
-/* Animation au survol des blocs */
-.number,
-.person,
-.order,
-.drawing {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+
 }
 
-/* Agrandissement léger et professionnel */
+/* Sur mobile/tablette tactile : pas d'agrandissement forcé */
+@media(hover:none){
+
 .number:hover,
+.art:hover,
 .person:hover,
-.order:hover,
-.drawing:hover {
-    transform: scale(1.025);
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.18),
-        inset 0 1px 1px rgba(255,255,255,.18);
+.order:hover{
+transform:none
 }
 
-/* On conserve la rotation du dessin */
-.drawing:hover {
-    transform: rotate(3deg) scale(1.025);
-}
-/* Animation au survol des blocs */
-.number,
-.person,
-.order,
-.drawing {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+.drawing:hover{
+transform:rotate(3deg)
 }
 
-/* Agrandissement léger et professionnel */
-.number:hover,
-.person:hover,
-.order:hover,
-.drawing:hover {
-    transform: scale(1.025);
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.18),
-        inset 0 1px 1px rgba(255,255,255,.18);
-}
-
-/* On conserve la rotation du dessin */
-.drawing:hover {
-    transform: rotate(3deg) scale(1.025);
-}
 }
 </style>
 </head>
