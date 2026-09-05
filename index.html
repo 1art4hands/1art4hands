@@ -11,26 +11,30 @@ html{scroll-behavior:smooth}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-color:#29251F;
+color:#F3DFC0;
 line-height:1.6;
 background:
-radial-gradient(circle at 5% 8%,rgba(230,57,70,.88),transparent 25%),
-radial-gradient(circle at 92% 10%,rgba(56,189,248,.88),transparent 25%),
-radial-gradient(circle at 15% 88%,rgba(76,175,80,.82),transparent 28%),
-radial-gradient(circle at 88% 82%,rgba(247,127,0,.86),transparent 27%),
-radial-gradient(circle at 50% 48%,rgba(252,191,73,.90),transparent 30%),
-radial-gradient(circle at 65% 18%,rgba(139,92,246,.45),transparent 20%),
-#FFF3D6;
+radial-gradient(circle at 5% 8%,rgba(79,138,84,.90),transparent 28%),
+radial-gradient(circle at 92% 12%,rgba(62,156,154,.82),transparent 27%),
+radial-gradient(circle at 15% 88%,rgba(229,184,63,.72),transparent 28%),
+radial-gradient(circle at 88% 82%,rgba(217,107,50,.78),transparent 29%),
+radial-gradient(circle at 52% 45%,rgba(185,66,60,.58),transparent 30%),
+#173F35;
 overflow-x:hidden
 }
 
 nav{
-position:fixed;top:0;left:0;width:100%;
+position:fixed;
+top:0;
+left:0;
+width:100%;
 padding:20px 7%;
-display:flex;justify-content:space-between;align-items:center;
-background:rgba(255,243,214,.78);
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(23,63,53,.84);
 backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(41,37,31,.14);
+border-bottom:1px solid rgba(243,223,192,.14);
 z-index:1000
 }
 
@@ -41,7 +45,7 @@ letter-spacing:-1px
 }
 
 .logo span{
-color:#E63946;
+color:#E5B83F;
 font-weight:400
 }
 
@@ -53,14 +57,14 @@ list-style:none
 }
 
 nav a{
-color:#29251F;
+color:#F3DFC0;
 text-decoration:none;
 font-size:15px;
 transition:.25s ease
 }
 
 nav a:hover{
-color:#E63946
+color:#E5B83F
 }
 
 .instagram-link{
@@ -73,13 +77,13 @@ justify-content:center
 width:21px;
 height:21px;
 fill:none;
-stroke:#29251F;
+stroke:#F3DFC0;
 stroke-width:1.7;
 transition:.25s ease
 }
 
 .instagram-link:hover svg{
-stroke:#E63946;
+stroke:#E5B83F;
 transform:scale(1.12)
 }
 
@@ -103,7 +107,7 @@ letter-spacing:3px;
 font-size:12px;
 font-weight:bold;
 margin-bottom:20px;
-color:#4CAF50
+color:#E5B83F
 }
 
 h1{
@@ -115,13 +119,13 @@ margin-bottom:30px
 
 h1 span{
 font-weight:300;
-color:#E63946
+color:#D96B32
 }
 
 .hero p{
 max-width:520px;
 font-size:19px;
-color:#514A40;
+color:#E6D2B5;
 margin-bottom:35px
 }
 
@@ -141,48 +145,48 @@ transition:.25s ease
 }
 
 .button-primary{
-background:#29251F;
-color:#FFF3D6
+background:#F3DFC0;
+color:#173F35
 }
 
 .button-primary:hover{
-background:#E63946;
-color:white;
+background:#E5B83F;
+color:#173F35;
 transform:translateY(-3px)
 }
 
 .button-secondary{
-border:1px solid rgba(41,37,31,.4);
-color:#29251F
+border:1px solid rgba(243,223,192,.45);
+color:#F3DFC0
 }
 
 .button-secondary:hover{
-background:rgba(41,37,31,.08)
+background:rgba(243,223,192,.10)
 }
 
 .drawing{
 width:360px;
 height:460px;
-border:1px solid rgba(41,37,31,.22);
-background:#FFF8E8;
+border:1px solid rgba(243,223,192,.25);
+background:#F3DFC0;
 display:flex;
 justify-content:center;
 align-items:center;
 transform:rotate(3deg);
-box-shadow:20px 25px 60px rgba(70,45,25,.20)
+box-shadow:20px 25px 60px rgba(0,0,0,.30)
 }
 
 .drawing-inner{
 width:75%;
 height:80%;
-border:2px solid #38BDF8;
+border:2px solid #3E9C9A;
 display:flex;
 justify-content:center;
 align-items:center;
 font-size:90px;
 font-weight:900;
 letter-spacing:-10px;
-color:#E63946
+color:#B9423C
 }
 
 section{
@@ -198,7 +202,7 @@ margin-bottom:50px
 
 .section-title span{
 font-weight:300;
-color:#F77F00
+color:#D96B32
 }
 
 .about{
@@ -210,7 +214,7 @@ align-items:center
 
 .about-text{
 font-size:20px;
-color:#514A40
+color:#E6D2B5
 }
 
 .about-text p{
@@ -225,8 +229,8 @@ gap:15px
 
 .number{
 padding:35px;
-background:rgba(255,248,232,.42);
-border:1px solid rgba(41,37,31,.14);
+background:rgba(243,223,192,.08);
+border:1px solid rgba(243,223,192,.15);
 border-radius:15px;
 backdrop-filter:blur(8px)
 }
@@ -235,7 +239,7 @@ backdrop-filter:blur(8px)
 display:block;
 font-size:40px;
 margin-bottom:5px;
-color:#4CAF50
+color:#4F8A54
 }
 
 .gallery{
@@ -246,10 +250,10 @@ gap:20px
 
 .art{
 aspect-ratio:1/1;
-background:#FCBF49;
+background:#D96B32;
 overflow:hidden;
 border-radius:8px;
-box-shadow:0 15px 35px rgba(70,45,25,.16)
+box-shadow:0 15px 35px rgba(0,0,0,.22)
 }
 
 .art img{
@@ -264,37 +268,37 @@ transform:scale(1.05)
 }
 
 .order{
-background:#FFE4A8;
-color:#29251F;
-border:1px solid rgba(41,37,31,.12);
+background:#604536;
+color:#F3DFC0;
+border:1px solid rgba(243,223,192,.12);
 border-radius:30px;
 padding:70px;
-box-shadow:0 20px 50px rgba(70,45,25,.13)
+box-shadow:0 20px 50px rgba(0,0,0,.22)
 }
 
 .order .small-title{
-color:#E63946
+color:#E5B83F
 }
 
 .order .section-title span{
-color:#F77F00
+color:#D96B32
 }
 
 .order p{
 max-width:600px;
-color:#514A40;
+color:#E6D2B5;
 font-size:18px;
 margin-bottom:30px
 }
 
 .order .button{
-background:#29251F;
-color:#FFF3D6
+background:#F3DFC0;
+color:#604536
 }
 
 .order .button:hover{
-background:#E63946;
-color:#fff
+background:#E5B83F;
+color:#173F35
 }
 
 .team{
@@ -304,9 +308,9 @@ gap:20px
 }
 
 .person{
-background:rgba(255,248,232,.42);
+background:rgba(243,223,192,.08);
 padding:40px;
-border:1px solid rgba(41,37,31,.14);
+border:1px solid rgba(243,223,192,.15);
 border-radius:15px;
 backdrop-filter:blur(8px)
 }
@@ -314,20 +318,20 @@ backdrop-filter:blur(8px)
 .person h3{
 font-size:28px;
 margin-bottom:10px;
-color:#8B5CF6
+color:#3E9C9A
 }
 
 .person p{
-color:#514A40
+color:#E6D2B5
 }
 
 footer{
 padding:50px 7%;
-border-top:1px solid rgba(41,37,31,.14);
+border-top:1px solid rgba(243,223,192,.15);
 display:flex;
 justify-content:space-between;
 gap:20px;
-color:#4CAF50
+color:#E5B83F
 }
 
 @media(max-width:800px){
@@ -431,7 +435,7 @@ r="4">
 cx="17.5"
 cy="6.5"
 r="1"
-fill="#29251F"
+fill="#F3DFC0"
 stroke="none">
 </circle>
 
