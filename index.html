@@ -11,12 +11,12 @@ html{scroll-behavior:smooth}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-color:#F5EFE5;
+color:#292B28;
 line-height:1.6;
 background:
-radial-gradient(circle at 10% 10%,rgba(185,111,104,.48),transparent 30%),
-radial-gradient(circle at 90% 80%,rgba(196,154,88,.35),transparent 35%),
-#332C38;
+radial-gradient(circle at 10% 10%,rgba(145,165,143,.55),transparent 30%),
+radial-gradient(circle at 90% 80%,rgba(213,154,123,.45),transparent 35%),
+#E8E1D5;
 overflow-x:hidden
 }
 
@@ -24,135 +24,354 @@ nav{
 position:fixed;top:0;left:0;width:100%;
 padding:20px 7%;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(51,44,56,.82);
+background:rgba(232,225,213,.82);
 backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.12);
+border-bottom:1px solid rgba(41,43,40,.12);
 z-index:1000
 }
-.logo{font-size:22px;font-weight:800;letter-spacing:-1px}
-.logo span{color:#D9A15F;font-weight:400}
-nav ul{display:flex;align-items:center;gap:30px;list-style:none}
-nav a{color:#F5EFE5;text-decoration:none;font-size:15px;transition:.25s ease}
-nav a:hover{color:#D9A15F}
 
-.instagram-link{display:flex;align-items:center;justify-content:center}
-.instagram-link svg{
-width:21px;height:21px;fill:none;stroke:#F5EFE5;stroke-width:1.7;transition:.25s ease
+.logo{
+font-size:22px;
+font-weight:800;
+letter-spacing:-1px
 }
-.instagram-link:hover svg{stroke:#D9A15F;transform:scale(1.12)}
+
+.logo span{
+color:#B98258;
+font-weight:400
+}
+
+nav ul{
+display:flex;
+align-items:center;
+gap:30px;
+list-style:none
+}
+
+nav a{
+color:#292B28;
+text-decoration:none;
+font-size:15px;
+transition:.25s ease
+}
+
+nav a:hover{
+color:#B98258
+}
+
+.instagram-link{
+display:flex;
+align-items:center;
+justify-content:center
+}
+
+.instagram-link svg{
+width:21px;
+height:21px;
+fill:none;
+stroke:#292B28;
+stroke-width:1.7;
+transition:.25s ease
+}
+
+.instagram-link:hover svg{
+stroke:#B98258;
+transform:scale(1.12)
+}
 
 .hero{
-min-height:100vh;padding:160px 7% 100px;
-display:flex;align-items:center;justify-content:space-between;
-gap:60px;position:relative
+min-height:100vh;
+padding:160px 7% 100px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+position:relative
 }
-.hero-text{max-width:650px}
-.small-title{
-text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold;
-margin-bottom:20px;color:#C8AEB8
-}
-h1{
-font-size:clamp(55px,8vw,110px);line-height:.95;
-letter-spacing:-6px;margin-bottom:30px
-}
-h1 span{font-weight:300;color:#D9A15F}
-.hero p{max-width:520px;font-size:19px;color:#D8CED0;margin-bottom:35px}
 
-.buttons{display:flex;gap:15px;flex-wrap:wrap}
-.button{
-display:inline-block;padding:14px 24px;border-radius:100px;
-text-decoration:none;font-weight:bold;transition:.25s ease
+.hero-text{
+max-width:650px
 }
-.button-primary{background:#F5EFE5;color:#332C38}
-.button-primary:hover{background:#D9A15F;color:white;transform:translateY(-3px)}
-.button-secondary{border:1px solid rgba(245,239,229,.4);color:#F5EFE5}
-.button-secondary:hover{background:rgba(245,239,229,.10)}
+
+.small-title{
+text-transform:uppercase;
+letter-spacing:3px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:20px;
+color:#71816D
+}
+
+h1{
+font-size:clamp(55px,8vw,110px);
+line-height:.95;
+letter-spacing:-6px;
+margin-bottom:30px
+}
+
+h1 span{
+font-weight:300;
+color:#B98258
+}
+
+.hero p{
+max-width:520px;
+font-size:19px;
+color:#5E625C;
+margin-bottom:35px
+}
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap
+}
+
+.button{
+display:inline-block;
+padding:14px 24px;
+border-radius:100px;
+text-decoration:none;
+font-weight:bold;
+transition:.25s ease
+}
+
+.button-primary{
+background:#292B28;
+color:#E8E1D5
+}
+
+.button-primary:hover{
+background:#B98258;
+color:white;
+transform:translateY(-3px)
+}
+
+.button-secondary{
+border:1px solid rgba(41,43,40,.35);
+color:#292B28
+}
+
+.button-secondary:hover{
+background:rgba(41,43,40,.08)
+}
 
 .drawing{
-width:360px;height:460px;border:1px solid rgba(245,239,229,.25);
-background:#F5EFE5;display:flex;justify-content:center;align-items:center;
-transform:rotate(3deg);box-shadow:20px 25px 60px rgba(0,0,0,.25)
-}
-.drawing-inner{
-width:75%;height:80%;border:2px solid #897080;
-display:flex;justify-content:center;align-items:center;
-font-size:90px;font-weight:900;letter-spacing:-10px;color:#B96F68
+width:360px;
+height:460px;
+border:1px solid rgba(41,43,40,.22);
+background:#F3EEE5;
+display:flex;
+justify-content:center;
+align-items:center;
+transform:rotate(3deg);
+box-shadow:20px 25px 60px rgba(50,45,38,.20)
 }
 
-section{padding:110px 7%;position:relative}
-.section-title{
-font-size:clamp(40px,6vw,70px);letter-spacing:-3px;margin-bottom:50px
+.drawing-inner{
+width:75%;
+height:80%;
+border:2px solid #71816D;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:90px;
+font-weight:900;
+letter-spacing:-10px;
+color:#B98258
 }
-.section-title span{font-weight:300;color:#D9A15F}
+
+section{
+padding:110px 7%;
+position:relative
+}
+
+.section-title{
+font-size:clamp(40px,6vw,70px);
+letter-spacing:-3px;
+margin-bottom:50px
+}
+
+.section-title span{
+font-weight:300;
+color:#B98258
+}
 
 .about{
-display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center
 }
-.about-text{font-size:20px;color:#D8CED0}
-.about-text p{margin-bottom:20px}
+
+.about-text{
+font-size:20px;
+color:#5E625C
+}
+
+.about-text p{
+margin-bottom:20px
+}
+
 .numbers{
-display:grid;grid-template-columns:1fr 1fr;gap:15px
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px
 }
+
 .number{
-padding:35px;background:rgba(245,239,229,.08);
-border:1px solid rgba(245,239,229,.15);border-radius:15px;
+padding:35px;
+background:rgba(255,255,255,.28);
+border:1px solid rgba(41,43,40,.13);
+border-radius:15px;
 backdrop-filter:blur(8px)
 }
+
 .number strong{
-display:block;font-size:40px;margin-bottom:5px;color:#C8AEB8
+display:block;
+font-size:40px;
+margin-bottom:5px;
+color:#71816D
 }
 
 .gallery{
-display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
+
 .art{
-aspect-ratio:1/1;background:#D8C39F;overflow:hidden;border-radius:8px;
-box-shadow:0 15px 35px rgba(0,0,0,.18)
+aspect-ratio:1/1;
+background:#D2BFA7;
+overflow:hidden;
+border-radius:8px;
+box-shadow:0 15px 35px rgba(50,45,38,.16)
 }
+
 .art img{
-width:100%;height:100%;object-fit:cover;transition:.4s ease
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.4s ease
 }
-.art:hover img{transform:scale(1.05)}
+
+.art:hover img{
+transform:scale(1.05)
+}
 
 .order{
-background:#423542;color:#F5EFE5;
-border:1px solid rgba(245,239,229,.10);
-border-radius:30px;padding:70px;
-box-shadow:0 20px 50px rgba(0,0,0,.16)
+background:#DCD3C5;
+color:#292B28;
+border:1px solid rgba(41,43,40,.10);
+border-radius:30px;
+padding:70px;
+box-shadow:0 20px 50px rgba(50,45,38,.13)
 }
-.order .small-title{color:#C8AEB8}
-.order .section-title span{color:#D9A15F}
-.order p{max-width:600px;color:#D8CED0;font-size:18px;margin-bottom:30px}
-.order .button{background:#F5EFE5;color:#332C38}
-.order .button:hover{background:#D9A15F;color:#fff}
+
+.order .small-title{
+color:#71816D
+}
+
+.order .section-title span{
+color:#B98258
+}
+
+.order p{
+max-width:600px;
+color:#5E625C;
+font-size:18px;
+margin-bottom:30px
+}
+
+.order .button{
+background:#292B28;
+color:#E8E1D5
+}
+
+.order .button:hover{
+background:#B98258;
+color:#fff
+}
 
 .team{
-display:grid;grid-template-columns:1fr 1fr;gap:20px
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
 }
+
 .person{
-background:rgba(245,239,229,.08);padding:40px;
-border:1px solid rgba(245,239,229,.15);border-radius:15px;
+background:rgba(255,255,255,.28);
+padding:40px;
+border:1px solid rgba(41,43,40,.13);
+border-radius:15px;
 backdrop-filter:blur(8px)
 }
-.person h3{font-size:28px;margin-bottom:10px;color:#D9A15F}
-.person p{color:#D8CED0}
+
+.person h3{
+font-size:28px;
+margin-bottom:10px;
+color:#B98258
+}
+
+.person p{
+color:#5E625C
+}
 
 footer{
-padding:50px 7%;border-top:1px solid rgba(245,239,229,.15);
-display:flex;justify-content:space-between;gap:20px;color:#C8AEB8
+padding:50px 7%;
+border-top:1px solid rgba(41,43,40,.13);
+display:flex;
+justify-content:space-between;
+gap:20px;
+color:#71816D
 }
 
 @media(max-width:800px){
-nav{padding:18px 5%}
-nav ul{gap:14px}
-nav a{font-size:12px}
-.hero{padding:130px 5% 70px;flex-direction:column;align-items:flex-start}
-.drawing{width:280px;height:350px;align-self:center}
-section{padding:80px 5%}
-.about,.team{grid-template-columns:1fr}
-.gallery{grid-template-columns:1fr 1fr}
-.order{padding:40px 25px}
-footer{flex-direction:column}
+
+nav{
+padding:18px 5%
+}
+
+nav ul{
+gap:14px
+}
+
+nav a{
+font-size:12px
+}
+
+.hero{
+padding:130px 5% 70px;
+flex-direction:column;
+align-items:flex-start
+}
+
+.drawing{
+width:280px;
+height:350px;
+align-self:center
+}
+
+section{
+padding:80px 5%
+}
+
+.about,.team{
+grid-template-columns:1fr
+}
+
+.gallery{
+grid-template-columns:1fr 1fr
+}
+
+.order{
+padding:40px 25px
+}
+
+footer{
+flex-direction:column
+}
+
 }
 </style>
 </head>
@@ -160,104 +379,303 @@ footer{flex-direction:column}
 <body>
 
 <nav>
-<div class="logo">1 Art <span>4</span> Hands</div>
+
+<div class="logo">
+1 Art <span>4</span> Hands
+</div>
+
 <ul>
-<li><a href="#accueil">Accueil</a></li>
-<li><a href="#projet">Présentation</a></li>
-<li><a href="#commande">Commande</a></li>
+
 <li>
-<a href="https://www.instagram.com/1art_4hands/?hl=fr"
-target="_blank" rel="noopener noreferrer"
+<a href="#accueil">Accueil</a>
+</li>
+
+<li>
+<a href="#projet">Présentation</a>
+</li>
+
+<li>
+<a href="#commande">Commande</a>
+</li>
+
+<li>
+
+<a
+href="https://www.instagram.com/1art_4hands/?hl=fr"
+target="_blank"
+rel="noopener noreferrer"
 class="instagram-link"
 aria-label="Instagram de 1 Art 4 Hands">
+
 <svg viewBox="0 0 24 24">
-<rect x="3" y="3" width="18" height="18" rx="5"></rect>
-<circle cx="12" cy="12" r="4"></circle>
-<circle cx="17.5" cy="6.5" r="1" fill="#F5EFE5" stroke="none"></circle>
+
+<rect
+x="3"
+y="3"
+width="18"
+height="18"
+rx="5">
+</rect>
+
+<circle
+cx="12"
+cy="12"
+r="4">
+</circle>
+
+<circle
+cx="17.5"
+cy="6.5"
+r="1"
+fill="#292B28"
+stroke="none">
+</circle>
+
 </svg>
+
 </a>
+
 </li>
+
 </ul>
+
 </nav>
 
 <main id="accueil">
 
 <section class="hero">
+
 <div class="hero-text">
-<div class="small-title">Dessins personnalisés</div>
-<h1>1 Art<br><span>4 Hands.</span></h1>
-<p>Deux passionnés de dessin, une même envie : transformer vos idées, vos souvenirs et vos envies en créations uniques.</p>
-<div class="buttons">
-<a href="#commande" class="button button-primary">Commander un dessin</a>
-<a href="#galerie" class="button button-secondary">Voir nos créations</a>
+
+<div class="small-title">
+Dessins personnalisés
 </div>
+
+<h1>
+1 Art<br>
+<span>4 Hands.</span>
+</h1>
+
+<p>
+Deux passionnés de dessin, une même envie : transformer vos idées, vos souvenirs et vos envies en créations uniques.
+</p>
+
+<div class="buttons">
+
+<a
+href="#commande"
+class="button button-primary">
+Commander un dessin
+</a>
+
+<a
+href="#galerie"
+class="button button-secondary">
+Voir nos créations
+</a>
+
+</div>
+
 </div>
 
 <div class="drawing">
-<div class="drawing-inner">1<br>4</div>
+
+<div class="drawing-inner">
+1<br>4
 </div>
+
+</div>
+
 </section>
 
 <section id="projet">
-<div class="small-title">Notre projet</div>
-<h2 class="section-title">L'art <span>à quatre mains.</span></h2>
+
+<div class="small-title">
+Notre projet
+</div>
+
+<h2 class="section-title">
+L'art <span>à quatre mains.</span>
+</h2>
+
 <div class="about">
+
 <div class="about-text">
-<p>1 Art 4 Hands est un projet créé par deux jeunes passionnés de dessin.</p>
-<p>Nous réalisons des dessins personnalisés sur commande, en donnant à chaque création une attention particulière.</p>
-<p>Notre objectif : créer des œuvres qui ont du sens pour ceux qui les commandent.</p>
+
+<p>
+1 Art 4 Hands est un projet créé par deux jeunes passionnés de dessin.
+</p>
+
+<p>
+Nous réalisons des dessins personnalisés sur commande, en donnant à chaque création une attention particulière.
+</p>
+
+<p>
+Notre objectif : créer des œuvres qui ont du sens pour ceux qui les commandent.
+</p>
+
 </div>
+
 <div class="numbers">
-<div class="number"><strong>01</strong>Une idée</div>
-<div class="number"><strong>02</strong>Un dessin</div>
-<div class="number"><strong>03</strong>Une création</div>
-<div class="number"><strong>04</strong>Vos mains</div>
+
+<div class="number">
+<strong>01</strong>
+Une idée
 </div>
+
+<div class="number">
+<strong>02</strong>
+Un dessin
 </div>
+
+<div class="number">
+<strong>03</strong>
+Une création
+</div>
+
+<div class="number">
+<strong>04</strong>
+Vos mains
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="galerie">
-<div class="small-title">Nos créations</div>
-<h2 class="section-title">La galerie <span>1 Art 4 Hands.</span></h2>
-<div class="gallery">
-<div class="art"><img src="images/dessin1.jpg" alt="Dessin réalisé par 1 Art 4 Hands"></div>
-<div class="art"><img src="images/dessin2.jpg" alt="Dessin réalisé par 1 Art 4 Hands"></div>
-<div class="art"><img src="images/dessin3.jpg" alt="Dessin réalisé par 1 Art 4 Hands"></div>
-<div class="art"><img src="images/dessin4.jpg" alt="Dessin réalisé par 1 Art 4 Hands"></div>
-<div class="art"><img src="images/dessin5.jpg" alt="Dessin réalisé par 1 Art 4 Hands"></div>
-<div class="art"><img src="images/dessin6.jpg" alt="Dessin réalisé par 1 Art 4 Hands"></div>
+
+<div class="small-title">
+Nos créations
 </div>
+
+<h2 class="section-title">
+La galerie <span>1 Art 4 Hands.</span>
+</h2>
+
+<div class="gallery">
+
+<div class="art">
+<img
+src="images/dessin1.jpg"
+alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img
+src="images/dessin2.jpg"
+alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img
+src="images/dessin3.jpg"
+alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img
+src="images/dessin4.jpg"
+alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img
+src="images/dessin5.jpg"
+alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+<div class="art">
+<img
+src="images/dessin6.jpg"
+alt="Dessin réalisé par 1 Art 4 Hands">
+</div>
+
+</div>
+
 </section>
 
 <section id="commande">
+
 <div class="order">
-<div class="small-title">Une idée en tête ?</div>
-<h2 class="section-title">Faisons-la<br><span>dessiner.</span></h2>
-<p>Vous avez une idée de dessin personnalisé ? Contactez-nous et expliquez-nous votre projet. Nous vous répondrons pour discuter de votre demande.</p>
-<a class="button" href="mailto:contact@1art4hands.fr">Nous contacter</a>
+
+<div class="small-title">
+Une idée en tête ?
 </div>
+
+<h2 class="section-title">
+Faisons-la<br>
+<span>dessiner.</span>
+</h2>
+
+<p>
+Vous avez une idée de dessin personnalisé ? Contactez-nous et expliquez-nous votre projet. Nous vous répondrons pour discuter de votre demande.
+</p>
+
+<a
+class="button"
+href="mailto:contact@1art4hands.fr">
+Nous contacter
+</a>
+
+</div>
+
 </section>
 
 <section>
-<div class="small-title">Qui sommes-nous ?</div>
-<h2 class="section-title">Deux personnes,<br><span>un projet.</span></h2>
+
+<div class="small-title">
+Qui sommes-nous ?
+</div>
+
+<h2 class="section-title">
+Deux personnes,<br>
+<span>un projet.</span>
+</h2>
+
 <div class="team">
+
 <div class="person">
-<h3>Prénom</h3>
-<p>Passionné de dessin et de création, il participe à la réalisation des œuvres et au développement du projet.</p>
+
+<h3>
+Prénom
+</h3>
+
+<p>
+Passionné de dessin et de création, il participe à la réalisation des œuvres et au développement du projet.
+</p>
+
 </div>
+
 <div class="person">
-<h3>Prénom</h3>
-<p>Passionné de dessin et de création, il participe à la réalisation des œuvres et au développement du projet.</p>
+
+<h3>
+Prénom
+</h3>
+
+<p>
+Passionné de dessin et de création, il participe à la réalisation des œuvres et au développement du projet.
+</p>
+
 </div>
+
 </div>
+
 </section>
 
 </main>
 
 <footer>
-<div>© 2026 — 1 Art 4 Hands</div>
-<div>Dessiné à quatre mains.</div>
+
+<div>
+© 2026 — 1 Art 4 Hands
+</div>
+
+<div>
+Dessiné à quatre mains.
+</div>
+
 </footer>
 
 </body>
