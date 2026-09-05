@@ -402,6 +402,9 @@ gap:20px
 }
 
 .person{
+display:flex;
+align-items:center;
+gap:25px;
 background:rgba(243,223,192,.08);
 padding:40px;
 border:1px solid rgba(243,223,192,.20);
@@ -427,29 +430,14 @@ box-shadow:
 inset 0 1px 2px rgba(255,255,255,.24)
 }
 
-.person h3{
-font-size:28px;
-margin-bottom:10px;
-color:#3E9C9A;
-transition:transform .35s ease
-}
-
-.person:hover h3{
-transform:translateX(4px)
-}
-
-.person p{
-color:#E6D2B5
-}
-
 /* PHOTOS DES ARTISTES */
 
 .person-photo{
+flex:0 0 90px;
 width:90px;
 height:90px;
 border-radius:50%;
 overflow:hidden;
-margin-bottom:22px;
 border:1px solid rgba(243,223,192,.30);
 background:rgba(243,223,192,.12);
 box-shadow:
@@ -474,6 +462,26 @@ transform:scale(1.06);
 box-shadow:
 0 12px 30px rgba(0,0,0,.25),
 inset 0 1px 2px rgba(255,255,255,.30)
+}
+
+.person-content{
+flex:1;
+min-width:0
+}
+
+.person h3{
+font-size:28px;
+margin-bottom:10px;
+color:#3E9C9A;
+transition:transform .35s ease
+}
+
+.person:hover h3{
+transform:translateX(4px)
+}
+
+.person p{
+color:#E6D2B5
 }
 
 footer{
@@ -527,8 +535,35 @@ grid-template-columns:1fr 1fr
 padding:40px 25px
 }
 
+.person{
+align-items:flex-start
+}
+
 footer{
 flex-direction:column
+}
+
+}
+
+@media(max-width:500px){
+
+.person{
+gap:18px;
+padding:28px 22px
+}
+
+.person-photo{
+flex-basis:70px;
+width:70px;
+height:70px
+}
+
+.person h3{
+font-size:22px
+}
+
+.person p{
+font-size:14px
 }
 
 }
@@ -818,6 +853,8 @@ src="images/gregoire.jpg"
 alt="Photo de Grégoire BOURRAT">
 </div>
 
+<div class="person-content">
+
 <h3>
 Grégoire BOURRAT
 </h3>
@@ -825,6 +862,8 @@ Grégoire BOURRAT
 <p>
 Artiste, c'est lui qui donne le côté réaliste et qui s'occupe des commandes.
 </p>
+
+</div>
 
 </div>
 
@@ -836,6 +875,8 @@ src="images/fatime.jpg"
 alt="Photo de Fatimé ANGELA">
 </div>
 
+<div class="person-content">
+
 <h3>
 Fatimé ANGELA
 </h3>
@@ -843,6 +884,8 @@ Fatimé ANGELA
 <p>
 Dessinatrice, c'est elle qui donne la touche de fantaisie dans les dessins, ce qui en fait notre spécificité.
 </p>
+
+</div>
 
 </div>
 
