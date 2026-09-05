@@ -11,12 +11,15 @@ html{scroll-behavior:smooth}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-color:#FFF4E3;
+color:#FFF3DF;
 line-height:1.6;
 background:
-radial-gradient(circle at 10% 10%,rgba(217,164,65,.50),transparent 30%),
-radial-gradient(circle at 90% 80%,rgba(117,134,83,.45),transparent 35%),
-#B96850;
+radial-gradient(circle at 8% 12%,rgba(120,156,114,.65),transparent 27%),
+radial-gradient(circle at 88% 15%,rgba(114,175,192,.55),transparent 28%),
+radial-gradient(circle at 18% 82%,rgba(224,184,79,.52),transparent 30%),
+radial-gradient(circle at 88% 78%,rgba(185,79,79,.52),transparent 28%),
+radial-gradient(circle at 52% 48%,rgba(217,130,75,.40),transparent 32%),
+#A85F4B;
 overflow-x:hidden
 }
 
@@ -24,9 +27,9 @@ nav{
 position:fixed;top:0;left:0;width:100%;
 padding:20px 7%;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(185,104,80,.82);
+background:rgba(168,95,75,.78);
 backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.12);
+border-bottom:1px solid rgba(255,255,255,.15);
 z-index:1000
 }
 
@@ -37,7 +40,7 @@ letter-spacing:-1px
 }
 
 .logo span{
-color:#F0C36A;
+color:#E0B84F;
 font-weight:400
 }
 
@@ -49,14 +52,14 @@ list-style:none
 }
 
 nav a{
-color:#FFF4E3;
+color:#FFF3DF;
 text-decoration:none;
 font-size:15px;
 transition:.25s ease
 }
 
 nav a:hover{
-color:#F0C36A
+color:#E0B84F
 }
 
 .instagram-link{
@@ -69,13 +72,13 @@ justify-content:center
 width:21px;
 height:21px;
 fill:none;
-stroke:#FFF4E3;
+stroke:#FFF3DF;
 stroke-width:1.7;
 transition:.25s ease
 }
 
 .instagram-link:hover svg{
-stroke:#F0C36A;
+stroke:#E0B84F;
 transform:scale(1.12)
 }
 
@@ -99,7 +102,7 @@ letter-spacing:3px;
 font-size:12px;
 font-weight:bold;
 margin-bottom:20px;
-color:#F0C36A
+color:#E0B84F
 }
 
 h1{
@@ -111,13 +114,13 @@ margin-bottom:30px
 
 h1 span{
 font-weight:300;
-color:#F0C36A
+color:#E0B84F
 }
 
 .hero p{
 max-width:520px;
 font-size:19px;
-color:#F0D9C8;
+color:#F4DCC9;
 margin-bottom:35px
 }
 
@@ -137,30 +140,30 @@ transition:.25s ease
 }
 
 .button-primary{
-background:#FFF4E3;
-color:#9F5747
+background:#FFF3DF;
+color:#A85F4B
 }
 
 .button-primary:hover{
-background:#F0C36A;
-color:#514038;
+background:#E0B84F;
+color:#4D4235;
 transform:translateY(-3px)
 }
 
 .button-secondary{
-border:1px solid rgba(255,244,227,.45);
-color:#FFF4E3
+border:1px solid rgba(255,243,223,.45);
+color:#FFF3DF
 }
 
 .button-secondary:hover{
-background:rgba(255,244,227,.10)
+background:rgba(255,243,223,.10)
 }
 
 .drawing{
 width:360px;
 height:460px;
-border:1px solid rgba(255,244,227,.28);
-background:#FFF4E3;
+border:1px solid rgba(255,243,223,.30);
+background:#FFF3DF;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -171,14 +174,14 @@ box-shadow:20px 25px 60px rgba(80,40,30,.25)
 .drawing-inner{
 width:75%;
 height:80%;
-border:2px solid #758653;
+border:2px solid #72AFC0;
 display:flex;
 justify-content:center;
 align-items:center;
 font-size:90px;
 font-weight:900;
 letter-spacing:-10px;
-color:#B96850
+color:#B94F4F
 }
 
 section{
@@ -194,7 +197,7 @@ margin-bottom:50px
 
 .section-title span{
 font-weight:300;
-color:#F0C36A
+color:#E0B84F
 }
 
 .about{
@@ -206,7 +209,7 @@ align-items:center
 
 .about-text{
 font-size:20px;
-color:#F0D9C8
+color:#F4DCC9
 }
 
 .about-text p{
@@ -221,8 +224,8 @@ gap:15px
 
 .number{
 padding:35px;
-background:rgba(255,244,227,.09);
-border:1px solid rgba(255,244,227,.16);
+background:rgba(255,243,223,.10);
+border:1px solid rgba(255,243,223,.17);
 border-radius:15px;
 backdrop-filter:blur(8px)
 }
@@ -231,7 +234,7 @@ backdrop-filter:blur(8px)
 display:block;
 font-size:40px;
 margin-bottom:5px;
-color:#F0C36A
+color:#72AFC0
 }
 
 .gallery{
@@ -242,7 +245,7 @@ gap:20px
 
 .art{
 aspect-ratio:1/1;
-background:#D18A68;
+background:#D9824B;
 overflow:hidden;
 border-radius:8px;
 box-shadow:0 15px 35px rgba(80,40,30,.18)
@@ -260,37 +263,37 @@ transform:scale(1.05)
 }
 
 .order{
-background:#9F5747;
-color:#FFF4E3;
-border:1px solid rgba(255,244,227,.12);
+background:#964F45;
+color:#FFF3DF;
+border:1px solid rgba(255,243,223,.13);
 border-radius:30px;
 padding:70px;
 box-shadow:0 20px 50px rgba(80,40,30,.18)
 }
 
 .order .small-title{
-color:#F0C36A
+color:#E0B84F
 }
 
 .order .section-title span{
-color:#F0C36A
+color:#E0B84F
 }
 
 .order p{
 max-width:600px;
-color:#F0D9C8;
+color:#F4DCC9;
 font-size:18px;
 margin-bottom:30px
 }
 
 .order .button{
-background:#FFF4E3;
-color:#9F5747
+background:#FFF3DF;
+color:#964F45
 }
 
 .order .button:hover{
-background:#F0C36A;
-color:#514038
+background:#E0B84F;
+color:#4D4235
 }
 
 .team{
@@ -300,9 +303,9 @@ gap:20px
 }
 
 .person{
-background:rgba(255,244,227,.09);
+background:rgba(255,243,223,.10);
 padding:40px;
-border:1px solid rgba(255,244,227,.16);
+border:1px solid rgba(255,243,223,.17);
 border-radius:15px;
 backdrop-filter:blur(8px)
 }
@@ -310,20 +313,20 @@ backdrop-filter:blur(8px)
 .person h3{
 font-size:28px;
 margin-bottom:10px;
-color:#F0C36A
+color:#D9824B
 }
 
 .person p{
-color:#F0D9C8
+color:#F4DCC9
 }
 
 footer{
 padding:50px 7%;
-border-top:1px solid rgba(255,244,227,.16);
+border-top:1px solid rgba(255,243,223,.17);
 display:flex;
 justify-content:space-between;
 gap:20px;
-color:#F0C36A
+color:#E0B84F
 }
 
 @media(max-width:800px){
@@ -427,7 +430,7 @@ r="4">
 cx="17.5"
 cy="6.5"
 r="1"
-fill="#FFF4E3"
+fill="#FFF3DF"
 stroke="none">
 </circle>
 
