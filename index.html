@@ -32,9 +32,11 @@ padding:20px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(23,63,53,.84);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(243,223,192,.14);
+background:rgba(23,63,53,.62);
+backdrop-filter:blur(22px) saturate(140%);
+-webkit-backdrop-filter:blur(22px) saturate(140%);
+border-bottom:1px solid rgba(243,223,192,.18);
+box-shadow:0 8px 30px rgba(0,0,0,.08);
 z-index:1000
 }
 
@@ -145,35 +147,46 @@ transition:.25s ease
 }
 
 .button-primary{
-background:#F3DFC0;
-color:#173F35
+background:rgba(243,223,192,.90);
+color:#173F35;
+box-shadow:
+0 8px 25px rgba(0,0,0,.12),
+inset 0 1px 1px rgba(255,255,255,.65)
 }
 
 .button-primary:hover{
-background:#E5B83F;
+background:rgba(229,184,63,.95);
 color:#173F35;
 transform:translateY(-3px)
 }
 
 .button-secondary{
 border:1px solid rgba(243,223,192,.45);
-color:#F3DFC0
+color:#F3DFC0;
+background:rgba(243,223,192,.06);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+box-shadow:inset 0 1px 1px rgba(255,255,255,.12)
 }
 
 .button-secondary:hover{
-background:rgba(243,223,192,.10)
+background:rgba(243,223,192,.13)
 }
 
 .drawing{
 width:360px;
 height:460px;
-border:1px solid rgba(243,223,192,.25);
-background:#F3DFC0;
+border:1px solid rgba(243,223,192,.45);
+background:rgba(243,223,192,.72);
+backdrop-filter:blur(18px) saturate(125%);
+-webkit-backdrop-filter:blur(18px) saturate(125%);
 display:flex;
 justify-content:center;
 align-items:center;
 transform:rotate(3deg);
-box-shadow:20px 25px 60px rgba(0,0,0,.30)
+box-shadow:
+20px 25px 60px rgba(0,0,0,.30),
+inset 0 1px 1px rgba(255,255,255,.65)
 }
 
 .drawing-inner{
@@ -186,7 +199,9 @@ align-items:center;
 font-size:90px;
 font-weight:900;
 letter-spacing:-10px;
-color:#B9423C
+color:#B9423C;
+background:rgba(255,255,255,.06);
+box-shadow:inset 0 1px 2px rgba(255,255,255,.35)
 }
 
 section{
@@ -230,9 +245,13 @@ gap:15px
 .number{
 padding:35px;
 background:rgba(243,223,192,.08);
-border:1px solid rgba(243,223,192,.15);
+border:1px solid rgba(243,223,192,.20);
 border-radius:15px;
-backdrop-filter:blur(8px)
+backdrop-filter:blur(18px) saturate(120%);
+-webkit-backdrop-filter:blur(18px) saturate(120%);
+box-shadow:
+0 12px 35px rgba(0,0,0,.08),
+inset 0 1px 1px rgba(255,255,255,.16)
 }
 
 .number strong{
@@ -268,12 +287,16 @@ transform:scale(1.05)
 }
 
 .order{
-background:#604536;
+background:rgba(96,69,54,.62);
 color:#F3DFC0;
-border:1px solid rgba(243,223,192,.12);
+border:1px solid rgba(243,223,192,.22);
 border-radius:30px;
 padding:70px;
-box-shadow:0 20px 50px rgba(0,0,0,.22)
+backdrop-filter:blur(22px) saturate(130%);
+-webkit-backdrop-filter:blur(22px) saturate(130%);
+box-shadow:
+0 20px 50px rgba(0,0,0,.22),
+inset 0 1px 1px rgba(255,255,255,.18)
 }
 
 .order .small-title{
@@ -292,8 +315,11 @@ margin-bottom:30px
 }
 
 .order .button{
-background:#F3DFC0;
-color:#604536
+background:rgba(243,223,192,.90);
+color:#604536;
+box-shadow:
+0 8px 25px rgba(0,0,0,.12),
+inset 0 1px 1px rgba(255,255,255,.65)
 }
 
 .order .button:hover{
@@ -310,9 +336,13 @@ gap:20px
 .person{
 background:rgba(243,223,192,.08);
 padding:40px;
-border:1px solid rgba(243,223,192,.15);
+border:1px solid rgba(243,223,192,.20);
 border-radius:15px;
-backdrop-filter:blur(8px)
+backdrop-filter:blur(18px) saturate(120%);
+-webkit-backdrop-filter:blur(18px) saturate(120%);
+box-shadow:
+0 12px 35px rgba(0,0,0,.08),
+inset 0 1px 1px rgba(255,255,255,.16)
 }
 
 .person h3{
