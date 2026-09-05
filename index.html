@@ -11,12 +11,12 @@ html{scroll-behavior:smooth}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-color:#F3EFE7;
+color:#F3EEE8;
 line-height:1.6;
 background:
-radial-gradient(circle at 10% 10%,rgba(74,133,143,.48),transparent 30%),
-radial-gradient(circle at 90% 80%,rgba(180,104,78,.30),transparent 35%),
-#20383E;
+radial-gradient(circle at 10% 10%,rgba(125,91,121,.42),transparent 30%),
+radial-gradient(circle at 90% 80%,rgba(181,116,105,.28),transparent 35%),
+#382F3B;
 overflow-x:hidden
 }
 
@@ -24,22 +24,22 @@ nav{
 position:fixed;top:0;left:0;width:100%;
 padding:20px 7%;
 display:flex;justify-content:space-between;align-items:center;
-background:rgba(32,56,62,.82);
+background:rgba(56,47,59,.82);
 backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(255,255,255,.12);
 z-index:1000
 }
 .logo{font-size:22px;font-weight:800;letter-spacing:-1px}
-.logo span{color:#C99170;font-weight:400}
+.logo span{color:#C99591;font-weight:400}
 nav ul{display:flex;align-items:center;gap:30px;list-style:none}
-nav a{color:#F3EFE7;text-decoration:none;font-size:15px;transition:.25s ease}
-nav a:hover{color:#C99170}
+nav a{color:#F3EEE8;text-decoration:none;font-size:15px;transition:.25s ease}
+nav a:hover{color:#C99591}
 
 .instagram-link{display:flex;align-items:center;justify-content:center}
 .instagram-link svg{
-width:21px;height:21px;fill:none;stroke:#F3EFE7;stroke-width:1.7;transition:.25s ease
+width:21px;height:21px;fill:none;stroke:#F3EEE8;stroke-width:1.7;transition:.25s ease
 }
-.instagram-link:hover svg{stroke:#C99170;transform:scale(1.12)}
+.instagram-link:hover svg{stroke:#C99591;transform:scale(1.12)}
 
 .hero{
 min-height:100vh;padding:160px 7% 100px;
@@ -49,64 +49,64 @@ gap:60px;position:relative
 .hero-text{max-width:650px}
 .small-title{
 text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold;
-margin-bottom:20px;color:#A8C1C4
+margin-bottom:20px;color:#C2B2C2
 }
 h1{
 font-size:clamp(55px,8vw,110px);line-height:.95;
 letter-spacing:-6px;margin-bottom:30px
 }
-h1 span{font-weight:300;color:#C99170}
-.hero p{max-width:520px;font-size:19px;color:#D2DCDD;margin-bottom:35px}
+h1 span{font-weight:300;color:#C99591}
+.hero p{max-width:520px;font-size:19px;color:#D8D0D6;margin-bottom:35px}
 
 .buttons{display:flex;gap:15px;flex-wrap:wrap}
 .button{
 display:inline-block;padding:14px 24px;border-radius:100px;
 text-decoration:none;font-weight:bold;transition:.25s ease
 }
-.button-primary{background:#F3EFE7;color:#20383E}
-.button-primary:hover{background:#C99170;color:white;transform:translateY(-3px)}
-.button-secondary{border:1px solid rgba(243,239,231,.4);color:#F3EFE7}
-.button-secondary:hover{background:rgba(243,239,231,.10)}
+.button-primary{background:#F3EEE8;color:#382F3B}
+.button-primary:hover{background:#C99591;color:white;transform:translateY(-3px)}
+.button-secondary{border:1px solid rgba(243,238,232,.4);color:#F3EEE8}
+.button-secondary:hover{background:rgba(243,238,232,.10)}
 
 .drawing{
-width:360px;height:460px;border:1px solid rgba(243,239,231,.25);
-background:#F3EFE7;display:flex;justify-content:center;align-items:center;
+width:360px;height:460px;border:1px solid rgba(243,238,232,.25);
+background:#F3EEE8;display:flex;justify-content:center;align-items:center;
 transform:rotate(3deg);box-shadow:20px 25px 60px rgba(0,0,0,.25)
 }
 .drawing-inner{
-width:75%;height:80%;border:2px solid #63858B;
+width:75%;height:80%;border:2px solid #8C718A;
 display:flex;justify-content:center;align-items:center;
-font-size:90px;font-weight:900;letter-spacing:-10px;color:#B56D55
+font-size:90px;font-weight:900;letter-spacing:-10px;color:#A9625B
 }
 
 section{padding:110px 7%;position:relative}
 .section-title{
 font-size:clamp(40px,6vw,70px);letter-spacing:-3px;margin-bottom:50px
 }
-.section-title span{font-weight:300;color:#C99170}
+.section-title span{font-weight:300;color:#C99591}
 
 .about{
 display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center
 }
-.about-text{font-size:20px;color:#D2DCDD}
+.about-text{font-size:20px;color:#D8D0D6}
 .about-text p{margin-bottom:20px}
 .numbers{
 display:grid;grid-template-columns:1fr 1fr;gap:15px
 }
 .number{
-padding:35px;background:rgba(243,239,231,.08);
-border:1px solid rgba(243,239,231,.15);border-radius:15px;
+padding:35px;background:rgba(243,238,232,.08);
+border:1px solid rgba(243,238,232,.15);border-radius:15px;
 backdrop-filter:blur(8px)
 }
 .number strong{
-display:block;font-size:40px;margin-bottom:5px;color:#A8C1C4
+display:block;font-size:40px;margin-bottom:5px;color:#C2B2C2
 }
 
 .gallery{
 display:grid;grid-template-columns:repeat(3,1fr);gap:20px
 }
 .art{
-aspect-ratio:1/1;background:#D5C9B7;overflow:hidden;border-radius:8px;
+aspect-ratio:1/1;background:#D4C4B5;overflow:hidden;border-radius:8px;
 box-shadow:0 15px 35px rgba(0,0,0,.18)
 }
 .art img{
@@ -115,31 +115,31 @@ width:100%;height:100%;object-fit:cover;transition:.4s ease
 .art:hover img{transform:scale(1.05)}
 
 .order{
-background:#2A484E;color:#F3EFE7;
-border:1px solid rgba(243,239,231,.10);
+background:#443742;color:#F3EEE8;
+border:1px solid rgba(243,238,232,.10);
 border-radius:30px;padding:70px;
 box-shadow:0 20px 50px rgba(0,0,0,.16)
 }
-.order .small-title{color:#A8C1C4}
-.order .section-title span{color:#C99170}
-.order p{max-width:600px;color:#D2DCDD;font-size:18px;margin-bottom:30px}
-.order .button{background:#F3EFE7;color:#20383E}
-.order .button:hover{background:#C99170;color:#fff}
+.order .small-title{color:#C2B2C2}
+.order .section-title span{color:#C99591}
+.order p{max-width:600px;color:#D8D0D6;font-size:18px;margin-bottom:30px}
+.order .button{background:#F3EEE8;color:#382F3B}
+.order .button:hover{background:#C99591;color:#fff}
 
 .team{
 display:grid;grid-template-columns:1fr 1fr;gap:20px
 }
 .person{
-background:rgba(243,239,231,.08);padding:40px;
-border:1px solid rgba(243,239,231,.15);border-radius:15px;
+background:rgba(243,238,232,.08);padding:40px;
+border:1px solid rgba(243,238,232,.15);border-radius:15px;
 backdrop-filter:blur(8px)
 }
-.person h3{font-size:28px;margin-bottom:10px;color:#C99170}
-.person p{color:#D2DCDD}
+.person h3{font-size:28px;margin-bottom:10px;color:#C99591}
+.person p{color:#D8D0D6}
 
 footer{
-padding:50px 7%;border-top:1px solid rgba(243,239,231,.15);
-display:flex;justify-content:space-between;gap:20px;color:#A9BFC2
+padding:50px 7%;border-top:1px solid rgba(243,238,232,.15);
+display:flex;justify-content:space-between;gap:20px;color:#BFB0BE
 }
 
 @media(max-width:800px){
@@ -173,7 +173,7 @@ aria-label="Instagram de 1 Art 4 Hands">
 <svg viewBox="0 0 24 24">
 <rect x="3" y="3" width="18" height="18" rx="5"></rect>
 <circle cx="12" cy="12" r="4"></circle>
-<circle cx="17.5" cy="6.5" r="1" fill="#F3EFE7" stroke="none"></circle>
+<circle cx="17.5" cy="6.5" r="1" fill="#F3EEE8" stroke="none"></circle>
 </svg>
 </a>
 </li>
