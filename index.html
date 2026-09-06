@@ -1,911 +1,122 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1 Art 4 Hands — Dessins personnalisés</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-color:#F3DFC0;
-line-height:1.6;
 background:
-radial-gradient(circle at 5% 8%,rgba(79,138,84,.90),transparent 28%),
-radial-gradient(circle at 92% 12%,rgba(62,156,154,.82),transparent 27%),
-radial-gradient(circle at 15% 88%,rgba(229,184,63,.72),transparent 28%),
-radial-gradient(circle at 88% 82%,rgba(217,107,50,.78),transparent 29%),
-radial-gradient(circle at 52% 45%,rgba(185,66,60,.58),transparent 30%),
-#173F35;
-overflow-x:hidden
+radial-gradient(circle at 5% 8%,rgba(180,137,63,.75),transparent 28%),
+radial-gradient(circle at 92% 12%,rgba(65,91,122,.85),transparent 28%),
+radial-gradient(circle at 15% 88%,rgba(218,190,119,.55),transparent 30%),
+radial-gradient(circle at 88% 82%,rgba(126,91,42,.65),transparent 30%),
+#172536;
+color:#F4EBDD;
 }
 
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:20px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(23,63,53,.84);
-backdrop-filter:blur(18px) saturate(130%);
--webkit-backdrop-filter:blur(18px) saturate(130%);
-border-bottom:1px solid rgba(243,223,192,.14);
-z-index:1000;
-transition:background .3s ease,box-shadow .3s ease
+background:rgba(23,37,54,.84);
+border-bottom:1px solid rgba(244,235,221,.14);
 }
 
-.logo{
-font-size:22px;
-font-weight:800;
-letter-spacing:-1px
+.logo span,
+.small-title,
+footer{
+color:#D5A94F;
 }
 
-.logo span{
-color:#E5B83F;
-font-weight:400
-}
-
-nav ul{
-display:flex;
-align-items:center;
-gap:30px;
-list-style:none
-}
-
-nav a{
-color:#F3DFC0;
-text-decoration:none;
-font-size:15px;
-transition:.25s ease
-}
-
-nav a:hover{
-color:#E5B83F
-}
-
-.instagram-link{
-display:flex;
-align-items:center;
-justify-content:center
-}
-
+nav a,
 .instagram-link svg{
-width:21px;
-height:21px;
-fill:none;
-stroke:#F3DFC0;
-stroke-width:1.7;
-transition:.25s ease
+color:#F4EBDD;
+stroke:#F4EBDD;
 }
 
+nav a:hover,
 .instagram-link:hover svg{
-stroke:#E5B83F;
-transform:scale(1.12)
+color:#D5A94F;
+stroke:#D5A94F;
 }
 
-.hero{
-min-height:100vh;
-padding:160px 7% 100px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-position:relative
+h1 span,
+.section-title span{
+color:#C99545;
 }
 
-.hero-text{
-max-width:650px
-}
-
-.small-title{
-text-transform:uppercase;
-letter-spacing:3px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:20px;
-color:#E5B83F
-}
-
-h1{
-font-size:clamp(55px,8vw,110px);
-line-height:.95;
-letter-spacing:-6px;
-margin-bottom:30px
-}
-
-h1 span{
-font-weight:300;
-color:#D96B32
-}
-
-.hero p{
-max-width:520px;
-font-size:19px;
-color:#E6D2B5;
-margin-bottom:35px
-}
-
-.buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap
-}
-
-.button{
-display:inline-block;
-padding:14px 24px;
-border-radius:100px;
-text-decoration:none;
-font-weight:bold;
-transition:.25s ease
+.hero p,
+.about-text,
+.person p,
+.order p{
+color:#D9D3C8;
 }
 
 .button-primary{
-background:#F3DFC0;
-color:#173F35;
-box-shadow:
-0 8px 25px rgba(0,0,0,.12),
-inset 0 1px 1px rgba(255,255,255,.65)
+background:#F4EBDD;
+color:#172536;
 }
 
-.button-primary:hover{
-background:#E5B83F;
-color:#173F35;
-transform:translateY(-3px)
+.button-primary:hover,
+.order .button:hover{
+background:#D5A94F;
+color:#172536;
 }
 
 .button-secondary{
-border:1px solid rgba(243,223,192,.45);
-color:#F3DFC0;
-background:rgba(243,223,192,.06);
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-box-shadow:inset 0 1px 1px rgba(255,255,255,.12)
+border-color:rgba(244,235,221,.40);
+color:#F4EBDD;
 }
 
 .button-secondary:hover{
-background:rgba(243,223,192,.13)
+background:rgba(244,235,221,.10);
 }
-
-/* CADRE 1 / 4 */
 
 .drawing{
-width:360px;
-height:460px;
-border:1px solid rgba(243,223,192,.45);
-background:rgba(243,223,192,.72);
-backdrop-filter:blur(18px) saturate(125%);
--webkit-backdrop-filter:blur(18px) saturate(125%);
-display:flex;
-justify-content:center;
-align-items:center;
-transform:rotate(3deg);
-box-shadow:
-20px 25px 60px rgba(0,0,0,.30),
-inset 0 1px 1px rgba(255,255,255,.65);
-transition:
-transform .45s cubic-bezier(.2,.8,.2,1),
-box-shadow .45s ease,
-background .45s ease
-}
-
-.drawing:hover{
-transform:rotate(3deg) scale(1.045);
-background:rgba(243,223,192,.80);
-box-shadow:
-25px 30px 70px rgba(0,0,0,.38),
-inset 0 1px 1px rgba(255,255,255,.80)
+background:rgba(244,235,221,.82);
+border-color:rgba(244,235,221,.45);
 }
 
 .drawing-inner{
-width:75%;
-height:80%;
-border:2px solid #3E9C9A;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:90px;
-font-weight:900;
-letter-spacing:-10px;
-color:#B9423C;
+border-color:#B58A3C;
+color:#9B513D;
 background:rgba(255,255,255,.06);
-box-shadow:inset 0 1px 2px rgba(255,255,255,.35);
-transition:transform .45s ease
 }
 
-.drawing:hover .drawing-inner{
-transform:scale(1.025)
-}
-
-section{
-padding:110px 7%;
-position:relative
-}
-
-.section-title{
-font-size:clamp(40px,6vw,70px);
-letter-spacing:-3px;
-margin-bottom:50px
-}
-
-.section-title span{
-font-weight:300;
-color:#D96B32
-}
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center
-}
-
-.about-text{
-font-size:20px;
-color:#E6D2B5
-}
-
-.about-text p{
-margin-bottom:20px
-}
-
-.numbers{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px
-}
-
-/* BLOCS NOTRE PROJET */
-
-.number{
-padding:35px;
-background:rgba(243,223,192,.08);
-border:1px solid rgba(243,223,192,.20);
-border-radius:15px;
-backdrop-filter:blur(18px) saturate(120%);
--webkit-backdrop-filter:blur(18px) saturate(120%);
-box-shadow:
-0 12px 35px rgba(0,0,0,.08),
-inset 0 1px 1px rgba(255,255,255,.16);
-transition:
-transform .35s cubic-bezier(.2,.8,.2,1),
-box-shadow .35s ease,
-background .35s ease,
-border-color .35s ease
-}
-
-.number:hover{
-transform:translateY(-7px) scale(1.035);
-background:rgba(243,223,192,.14);
-border-color:rgba(243,223,192,.32);
-box-shadow:
-0 22px 45px rgba(0,0,0,.18),
-inset 0 1px 2px rgba(255,255,255,.24)
+.number,
+.person{
+background:rgba(244,235,221,.08);
+border-color:rgba(244,235,221,.18);
 }
 
 .number strong{
-display:block;
-font-size:40px;
-margin-bottom:5px;
-color:#4F8A54;
-transition:transform .35s ease
+color:#D5A94F;
 }
 
-.number:hover strong{
-transform:translateX(4px)
-}
-
-/* GALERIE */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px
+.person h3{
+color:#B58A3C;
 }
 
 .art{
-aspect-ratio:1/1;
-background:#D96B32;
-overflow:hidden;
-border-radius:8px;
-box-shadow:0 15px 35px rgba(0,0,0,.22);
-transition:
-transform .4s cubic-bezier(.2,.8,.2,1),
-box-shadow .4s ease
+background:#B86B45;
 }
-
-.art:hover{
-transform:translateY(-8px) scale(1.035);
-box-shadow:
-0 25px 50px rgba(0,0,0,.32)
-}
-
-.art img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:transform .5s cubic-bezier(.2,.8,.2,1)
-}
-
-.art:hover img{
-transform:scale(1.06)
-}
-
-/* RECTANGLE COMMANDE */
 
 .order{
-background:rgba(96,69,54,.62);
-color:#F3DFC0;
-border:1px solid rgba(243,223,192,.22);
-border-radius:30px;
-padding:70px;
-backdrop-filter:blur(22px) saturate(130%);
--webkit-backdrop-filter:blur(22px) saturate(130%);
-box-shadow:
-0 20px 50px rgba(0,0,0,.22),
-inset 0 1px 1px rgba(255,255,255,.18);
-transition:
-transform .45s cubic-bezier(.2,.8,.2,1),
-box-shadow .45s ease,
-background .45s ease,
-border-color .45s ease
-}
-
-.order:hover{
-transform:translateY(-9px) scale(1.018);
-background:rgba(96,69,54,.72);
-border-color:rgba(243,223,192,.34);
-box-shadow:
-0 30px 65px rgba(0,0,0,.30),
-inset 0 1px 2px rgba(255,255,255,.24)
+background:rgba(83,61,39,.70);
+color:#F4EBDD;
+border-color:rgba(244,235,221,.18);
 }
 
 .order .small-title{
-color:#E5B83F
+color:#D5A94F;
 }
 
 .order .section-title span{
-color:#D96B32
-}
-
-.order p{
-max-width:600px;
-color:#E6D2B5;
-font-size:18px;
-margin-bottom:30px
+color:#C99545;
 }
 
 .order .button{
-background:#F3DFC0;
-color:#604536;
-transition:.3s ease
-}
-
-.order .button:hover{
-background:#E5B83F;
-color:#173F35;
-transform:translateY(-3px)
-}
-
-/* DEUX PERSONNES */
-
-.team{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px
-}
-
-.person{
-display:flex;
-align-items:center;
-gap:25px;
-background:rgba(243,223,192,.08);
-padding:40px;
-border:1px solid rgba(243,223,192,.20);
-border-radius:15px;
-backdrop-filter:blur(18px) saturate(120%);
--webkit-backdrop-filter:blur(18px) saturate(120%);
-box-shadow:
-0 12px 35px rgba(0,0,0,.08),
-inset 0 1px 1px rgba(255,255,255,.16);
-transition:
-transform .35s cubic-bezier(.2,.8,.2,1),
-box-shadow .35s ease,
-background .35s ease,
-border-color .35s ease
-}
-
-.person:hover{
-transform:translateY(-7px) scale(1.035);
-background:rgba(243,223,192,.14);
-border-color:rgba(243,223,192,.32);
-box-shadow:
-0 22px 45px rgba(0,0,0,.18),
-inset 0 1px 2px rgba(255,255,255,.24)
-}
-
-/* PHOTOS DES ARTISTES */
-
-.person-photo{
-flex:0 0 90px;
-width:90px;
-height:90px;
-border-radius:50%;
-overflow:hidden;
-border:1px solid rgba(243,223,192,.30);
-background:rgba(243,223,192,.12);
-box-shadow:
-0 8px 25px rgba(0,0,0,.18),
-inset 0 1px 2px rgba(255,255,255,.25);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-transition:
-transform .35s cubic-bezier(.2,.8,.2,1),
-box-shadow .35s ease
-}
-
-.person-photo img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block
-}
-
-.person:hover .person-photo{
-transform:scale(1.06);
-box-shadow:
-0 12px 30px rgba(0,0,0,.25),
-inset 0 1px 2px rgba(255,255,255,.30)
-}
-
-.person-content{
-flex:1;
-min-width:0
-}
-
-.person h3{
-font-size:28px;
-margin-bottom:10px;
-color:#3E9C9A;
-transition:transform .35s ease
-}
-
-.person:hover h3{
-transform:translateX(4px)
-}
-
-.person p{
-color:#E6D2B5
-}
-
-footer{
-padding:50px 7%;
-border-top:1px solid rgba(243,223,192,.15);
-display:flex;
-justify-content:space-between;
-gap:20px;
-color:#E5B83F
-}
-
-@media(max-width:800px){
-
-nav{
-padding:18px 5%
-}
-
-nav ul{
-gap:14px
-}
-
-nav a{
-font-size:12px
-}
-
-.hero{
-padding:130px 5% 70px;
-flex-direction:column;
-align-items:flex-start
-}
-
-.drawing{
-width:280px;
-height:350px;
-align-self:center
-}
-
-section{
-padding:80px 5%
-}
-
-.about,.team{
-grid-template-columns:1fr
-}
-
-.gallery{
-grid-template-columns:1fr 1fr
-}
-
-.order{
-padding:40px 25px
-}
-
-.person{
-align-items:flex-start
-}
-
-footer{
-flex-direction:column
-}
-
-}
-
-@media(max-width:500px){
-
-.person{
-gap:18px;
-padding:28px 22px
+background:#F4EBDD;
+color:#172536;
 }
 
 .person-photo{
-flex-basis:70px;
-width:70px;
-height:70px
+background:rgba(244,235,221,.12);
+border-color:rgba(244,235,221,.28);
 }
 
-.person h3{
-font-size:22px
+footer{
+border-top-color:rgba(244,235,221,.15);
 }
-
-.person p{
-font-size:14px
-}
-
-}
-
-@media(hover:none){
-
-.number:hover,
-.art:hover,
-.person:hover,
-.order:hover{
-transform:none
-}
-
-.drawing:hover{
-transform:rotate(3deg)
-}
-
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-
-<div class="logo">
-1 Art <span>4</span> Hands
-</div>
-
-<ul>
-
-<li>
-<a href="#accueil">Accueil</a>
-</li>
-
-<li>
-<a href="#projet">Présentation</a>
-</li>
-
-<li>
-<a href="#commande">Commande</a>
-</li>
-
-<li>
-
-<a
-href="https://www.instagram.com/1art_4hands/?hl=fr"
-target="_blank"
-rel="noopener noreferrer"
-class="instagram-link"
-aria-label="Instagram de 1 Art 4 Hands">
-
-<svg viewBox="0 0 24 24">
-
-<rect
-x="3"
-y="3"
-width="18"
-height="18"
-rx="5">
-</rect>
-
-<circle
-cx="12"
-cy="12"
-r="4">
-</circle>
-
-<circle
-cx="17.5"
-cy="6.5"
-r="1"
-fill="#F3DFC0"
-stroke="none">
-</circle>
-
-</svg>
-
-</a>
-
-</li>
-
-</ul>
-
-</nav>
-
-<main id="accueil">
-
-<section class="hero">
-
-<div class="hero-text">
-
-<div class="small-title">
-Dessins personnalisés
-</div>
-
-<h1>
-1 Art<br>
-<span>4 Hands.</span>
-</h1>
-
-<p>
-Deux passionnés de dessin, une même envie : transformer vos idées, vos souvenirs et vos envies en créations uniques.
-</p>
-
-<div class="buttons">
-
-<a
-href="#commande"
-class="button button-primary">
-Commander un dessin
-</a>
-
-<a
-href="#galerie"
-class="button button-secondary">
-Voir nos créations
-</a>
-
-</div>
-
-</div>
-
-<div class="drawing">
-
-<div class="drawing-inner">
-1<br>4
-</div>
-
-</div>
-
-</section>
-
-<section id="projet">
-
-<div class="small-title">
-Notre projet
-</div>
-
-<h2 class="section-title">
-L'art <span>à quatre mains.</span>
-</h2>
-
-<div class="about">
-
-<div class="about-text">
-
-<p>
-1 Art 4 Hands est un projet créé par deux jeunes passionnés de dessin.
-</p>
-
-<p>
-Nous réalisons des dessins personnalisés sur commande, en donnant à chaque création une attention particulière.
-</p>
-
-<p>
-Notre objectif : créer des œuvres qui ont du sens pour ceux qui les commandent.
-</p>
-
-</div>
-
-<div class="numbers">
-
-<div class="number">
-<strong>01</strong>
-Une idée
-</div>
-
-<div class="number">
-<strong>02</strong>
-Un dessin
-</div>
-
-<div class="number">
-<strong>03</strong>
-Une création
-</div>
-
-<div class="number">
-<strong>04</strong>
-Vos mains
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="galerie">
-
-<div class="small-title">
-Nos créations
-</div>
-
-<h2 class="section-title">
-La galerie <span>1 Art 4 Hands.</span>
-</h2>
-
-<div class="gallery">
-
-<div class="art">
-<img
-src="images/dessin1.jpg"
-alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
-
-<div class="art">
-<img
-src="images/dessin2.jpg"
-alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
-
-<div class="art">
-<img
-src="images/dessin3.jpg"
-alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
-
-<div class="art">
-<img
-src="images/dessin4.jpg"
-alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
-
-<div class="art">
-<img
-src="images/dessin5.jpg"
-alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
-
-<div class="art">
-<img
-src="images/dessin6.jpg"
-alt="Dessin réalisé par 1 Art 4 Hands">
-</div>
-
-</div>
-
-</section>
-
-<section id="commande">
-
-<div class="order">
-
-<div class="small-title">
-Une idée en tête ?
-</div>
-
-<h2 class="section-title">
-Faisons-la<br>
-<span>dessiner.</span>
-</h2>
-
-<p>
-Vous avez une idée de dessin personnalisé ? Contactez-nous et expliquez-nous votre projet. Nous vous répondrons pour discuter de votre demande.
-</p>
-
-<a
-class="button"
-href="mailto:contact@1art4hands.fr">
-Nous contacter
-</a>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="small-title">
-Qui sommes-nous ?
-</div>
-
-<h2 class="section-title">
-Deux personnes,<br>
-<span>un projet.</span>
-</h2>
-
-<div class="team">
-
-<div class="person">
-
-<div class="person-photo">
-<img
-src="images/gregoire.jpg"
-alt="Photo de Grégoire BOURRAT">
-</div>
-
-<div class="person-content">
-
-<h3>
-Greg
-</h3>
-
-<p>
-Artiste, c'est lui qui donne le côté réaliste et qui s'occupe des commandes.
-</p>
-
-</div>
-
-</div>
-
-<div class="person">
-
-<div class="person-photo">
-<img
-src="images/fatime.jpg"
-alt="Photo de Fatimé ANGELA">
-</div>
-
-<div class="person-content">
-
-<h3>
-Ddelux
-</h3>
-
-<p>
-Dessinatrice, c'est elle qui donne la touche de fantaisie dans les dessins, ce qui en fait notre spécificité.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-<footer>
-
-<div>
-© 2026 — 1 Art 4 Hands
-</div>
-
-<div>
-Dessiné à quatre mains.
-</div>
-
-</footer>
-
-</body>
-</html>
